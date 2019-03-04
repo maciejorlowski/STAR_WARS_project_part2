@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/dialog_title"
+            android:text="@string/exitdialog_title"
+            android:textSize="@dimen/dialog_title"
+            android:textColor="@color/basic_text"
+            android:paddingLeft="@dimen/basic_margin"
+            android:layout_marginTop="@dimen/basic_margin"
+            android:paddingRight="@dimen/basic_margin"/>
+    <TextView
+            android:id="@+id/dialog_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/exitdialog_text"
+            android:textSize="@dimen/dialog_message"
+            android:paddingLeft="@dimen/basic_margin"
+            android:paddingRight="@dimen/basic_margin"
+            android:paddingTop="@dimen/basic_margin"
+            android:paddingBottom="@dimen/basic_margin"
+            android:layout_below="@+id/dialog_title"/>
+
+    <android.support.v7.widget.AppCompatButton
+            android:id="@+id/accept_btn"
+            style="@style/button_dialog"
+            android:layout_width="105dp"
+            android:text="@string/yes_btn"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/dialog_text"/>
+
+    <android.support.v7.widget.AppCompatButton
+            android:id="@+id/cancel_btn"
+            style="@style/button_dialog"
+            android:layout_width="105dp"
+            android:text="@string/no_btn"
+            android:layout_toStartOf="@+id/accept_btn"
+            android:layout_below="@id/dialog_text" />
+
+</RelativeLayout>

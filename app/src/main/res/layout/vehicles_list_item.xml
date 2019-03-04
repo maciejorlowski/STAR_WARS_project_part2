@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:padding="8dp">
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="179dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@id/name_label_v"
+                    android:layout_marginLeft="8dp"
+                    android:id="@+id/v_name"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="212dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/v_name"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@id/model_label_v"
+                    android:id="@+id/v_model"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="285dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/v_manufacturer"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@id/class_label_v"
+                    android:id="@+id/v_class"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="164dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/v_model"
+                    android:id="@+id/v_cost"
+                    android:layout_toRightOf="@id/cost_label_v"
+                    android:layout_marginTop="8dp"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="101dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/v_cost"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@id/lenght_label_v"
+                    android:id="@+id/v_length"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/v_length"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@id/speed_label_v"
+                    android:id="@+id/v_speed"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/v_speed"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@id/crew_label_v"
+                    android:id="@+id/v_crew"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/v_crew"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@id/passengers_label_v"
+                    android:id="@+id/v_passengers"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="230dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/v_passengers"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@id/cargo_capacity_label_v"
+                    android:id="@+id/v_cargo_capacity"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/v_cargo_capacity"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@id/cargo_capacity_label_v"
+                    android:id="@+id/v_comsumables"/>
+
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="317dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/v_comsumables"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@id/manufacturer_label_v"
+                    android:id="@+id/v_manufacturer"/>
+
+            <TextView
+                    android:text="Name "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="2dp"
+                    android:layout_alignParentTop="true"
+                    android:id="@+id/name_label_v"
+                    android:layout_marginTop="8dp"/>
+
+            <TextView
+                    android:text="Model "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/model_label_v"
+                    android:layout_marginStart="2dp"
+                    android:layout_below="@id/name_label_v"
+                    android:layout_marginTop="8dp"/>
+
+            <TextView
+                    android:text="Class "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/class_label_v"
+                    android:layout_marginStart="2dp"
+                    android:layout_below="@id/manufacturer_label_v"
+                    android:layout_marginTop="8dp"/>
+            <TextView
+                    android:text="Cost "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cost_label_v"
+                    android:layout_marginStart="2dp"
+                    android:layout_below="@id/model_label_v"
+                    android:layout_marginTop="8dp"/>
+            <TextView
+                    android:text="Lenght "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lenght_label_v"
+                    android:layout_marginStart="2dp"
+                    android:layout_below="@id/cost_label_v"
+                    android:layout_marginTop="8dp"/>
+            <TextView
+                    android:text="Max speed "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/speed_label_v"
+                    android:layout_marginStart="2dp"
+                    android:layout_below="@id/lenght_label_v"
+                    android:layout_marginTop="8dp"/>
+            <TextView
+                    android:text="Crew "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/crew_label_v"
+                    android:layout_marginStart="2dp"
+                    android:layout_below="@id/speed_label_v"
+                    android:layout_marginTop="8dp"/>
+            <TextView
+                    android:text="Passengers "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/passengers_label_v"
+                    android:layout_marginStart="2dp"
+                    android:layout_below="@id/crew_label_v"
+                    android:layout_marginTop="8dp"/>
+            <TextView
+                    android:text="Cargo capacity "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cargo_capacity_label_v"
+                    android:layout_marginStart="2dp"
+                    android:layout_below="@id/passengers_label_v"
+                    android:layout_marginTop="8dp"/>
+            <TextView
+                    android:text="Consumables "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/consumables_label_v"
+                    android:layout_marginStart="2dp"
+                    android:layout_below="@id/cargo_capacity_label_v"
+                    android:layout_marginTop="8dp"/>
+
+            <TextView
+                    android:text="Manufacturer "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/manufacturer_label_v"
+                    android:layout_marginStart="2dp"
+                    android:layout_below="@id/consumables_label_v"
+                    android:layout_marginTop="8dp"/>
+
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+</LinearLayout>

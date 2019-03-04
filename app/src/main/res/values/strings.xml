@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">STAR_WARS_project</string>
+
+    <string name="enter_title">Enter title</string>
+    <string name="enter_model">Enter model</string>
+    <string name="enter_name">Enter name</string>
+    <string name="search_button">Search</string>
+    <string name="enter_birth_year">Enter birth year</string>
+    <string name="enter_class">Enter class</string>
+    <string name="enter_length">Enter length</string>
+    <string name="enter_classification">Enter classification</string>
+    <string name="enter_homeworld">Enter homeworld</string>
+    <string name="enter_diameter">Enter diameter</string>
+    <string name="enter_gravity">Enter gravity</string>
+    <string name="enter_population">Enter population</string>
+
+    <string name="exitdialog_title">Activity Exit Alert</string>
+    <string name="exitdialog_text">Are you sure want to exit?</string>
+    <string name="yes_btn">YES</string>
+    <string name="no_btn">NO</string>
+
+
+</resources>
