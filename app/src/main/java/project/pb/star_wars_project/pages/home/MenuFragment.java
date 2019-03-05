@@ -26,7 +26,7 @@ public class MenuFragment extends BaseFragment {
         super.onViewCreated(view, savedInstanceState);
         getActions().topBar().setTitle("Menu");
 
-        ImageButton searchButton = view.findViewById(R.id.imageButton1);
+        ImageButton searchButton = view.findViewById(R.id.imageBtn1);
         searchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
