@@ -6,6 +6,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 import project.pb.star_wars_project.R;
 import project.pb.star_wars_project.models.interfaces.models.Species;
@@ -26,7 +27,7 @@ public class SpeciesAdapter extends RecyclerView.Adapter<SpeciesAdapter.SpeciesV
     @Override
     public SpeciesViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         LayoutInflater inflater = LayoutInflater.from(mContext);
-        View view = inflater.inflate(R.layout.species_list_item,null);
+        View view = inflater.inflate(R.layout.species_single_item,null);
         return new SpeciesViewHolder(view);
     }
 
@@ -35,15 +36,16 @@ public class SpeciesAdapter extends RecyclerView.Adapter<SpeciesAdapter.SpeciesV
 
         Species specie=speciesList.get(i);
         speciesViewHolder.name.setText(specie.getName());
-        speciesViewHolder.height.setText(specie.getAverage_height());
         speciesViewHolder.classification.setText(specie.getClassification());
+        speciesViewHolder.imageView.setImageResource(R.drawable.logo);
+        /*speciesViewHolder.height.setText(specie.getAverage_height());
         speciesViewHolder.hair_color.setText(specie.getHair_colors());
         speciesViewHolder.skin_color.setText(specie.getSkin_colors());
         speciesViewHolder.eye_color.setText(specie.getEye_colors());
         speciesViewHolder.avarage_lifespan.setText(specie.getAverage_lifespan());
         speciesViewHolder.language.setText(specie.getLanguage());
         speciesViewHolder.designation.setText(specie.getDesignation());
-        speciesViewHolder.homeworld.setText(specie.getHomeworld());
+        speciesViewHolder.homeworld.setText(specie.getHomeworld());*/
     }
 
     @Override
@@ -53,20 +55,22 @@ public class SpeciesAdapter extends RecyclerView.Adapter<SpeciesAdapter.SpeciesV
 
     public class SpeciesViewHolder extends RecyclerView.ViewHolder {
 
-        TextView name,height,classification,hair_color,skin_color,eye_color,avarage_lifespan,language,designation,homeworld;
+        TextView name,classification;
+        ImageView imageView;
         public SpeciesViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            name=itemView.findViewById(R.id.sp_name);
-            height=itemView.findViewById(R.id.sp_height);
-            classification=itemView.findViewById(R.id.sp_classification);
+            name=itemView.findViewById(R.id.specie_name);
+            classification=itemView.findViewById(R.id.specie_classification_label);
+            imageView=itemView.findViewById(R.id.specie_image_view);
+           /* height=itemView.findViewById(R.id.sp_height);
             avarage_lifespan=itemView.findViewById(R.id.sp_av_lifespan);
             language=itemView.findViewById(R.id.sp_language);
             skin_color=itemView.findViewById(R.id.sp_skin_color);
             eye_color=itemView.findViewById(R.id.sp_eye_color);
             hair_color=itemView.findViewById(R.id.sp_hair_color);
             designation=itemView.findViewById(R.id.sp_designation);
-            homeworld=itemView.findViewById(R.id.sp_homeworld);
+            homeworld=itemView.findViewById(R.id.sp_homeworld);*/
         }
     }
 }

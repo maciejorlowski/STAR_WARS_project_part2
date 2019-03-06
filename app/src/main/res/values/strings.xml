@@ -18,6 +18,12 @@
     <string name="exitdialog_text">Are you sure want to exit?</string>
     <string name="yes_btn">YES</string>
     <string name="no_btn">NO</string>
+    <string name="more_button">More</string>
+    <string name="birth_year">Birth year</string>
+    <string name="director">Director</string>
+    <string name="population">Population</string>
+    <string name="classification">Classification</string>
+    <string name="model">Model</string>
 
 
 </resources>

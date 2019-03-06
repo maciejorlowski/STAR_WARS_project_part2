@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import project.pb.star_wars_project.R;
 import project.pb.star_wars_project.models.interfaces.models.Films;
@@ -31,7 +32,7 @@ public class PeopleAdapter extends RecyclerView.Adapter<PeopleAdapter.PeopleView
     @Override
     public PeopleViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         LayoutInflater inflater = LayoutInflater.from(mContext);
-        View view = inflater.inflate(R.layout.people_list_item,null);
+        View view = inflater.inflate(R.layout.people_single_item,null);
         return new PeopleViewHolder(view);
 
     }
@@ -41,15 +42,15 @@ public class PeopleAdapter extends RecyclerView.Adapter<PeopleAdapter.PeopleView
 
         People people = peopleList.get(i);
         peopleViewHolder.name.setText(people.getName());
-        peopleViewHolder.height.setText(people.getHeight());
+        peopleViewHolder.birth_year.setText(people.getBirth_year());
+        peopleViewHolder.imageView.setImageResource(R.drawable.logo);
+       /* peopleViewHolder.height.setText(people.getHeight());
         peopleViewHolder.mass.setText(people.getMass());
         peopleViewHolder.hair_color.setText(people.getHair_color());
         peopleViewHolder.skin_color.setText(people.getSkin_color());
         peopleViewHolder.eye_color.setText(people.getEye_color());
-        peopleViewHolder.birth_year.setText(people.getBirth_year());
         peopleViewHolder.gender.setText(people.getGender());
-        peopleViewHolder.homeworld.setText(people.getHomeworld());
-       // filmsList=people.getFilms();
+        peopleViewHolder.homeworld.setText(people.getHomeworld());*/
 
     }
 
@@ -60,26 +61,27 @@ public class PeopleAdapter extends RecyclerView.Adapter<PeopleAdapter.PeopleView
 
     class PeopleViewHolder extends RecyclerView.ViewHolder{
 
-        TextView name,height,mass,hair_color,skin_color,eye_color,birth_year,gender,homeworld;
-        Button films,vehicles,starships,species;
+        TextView name,birth_year;
+        //Button films,vehicles,starships,species;
+        ImageView imageView;
 
         public PeopleViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            name=itemView.findViewById(R.id.r_name);
-            height=itemView.findViewById(R.id.r_height);
-            name=itemView.findViewById(R.id.r_name);
+            name=itemView.findViewById(R.id.people_name);
+            birth_year=itemView.findViewById(R.id.people_birth_year_label);
+            imageView=itemView.findViewById(R.id.people_image_view);
+           /* height=itemView.findViewById(R.id.r_height);
             mass=itemView.findViewById(R.id.r_mass);
             hair_color=itemView.findViewById(R.id.r_hair_color);
             skin_color=itemView.findViewById(R.id.r_skin_color);
             eye_color=itemView.findViewById(R.id.r_eye_color);
-            birth_year=itemView.findViewById(R.id.r_birth_year);
             gender=itemView.findViewById(R.id.r_gender);
             homeworld=itemView.findViewById(R.id.r_homeworld);
             films=itemView.findViewById(R.id.r_films);
             vehicles=itemView.findViewById(R.id.r_vehicles);
             starships=itemView.findViewById(R.id.r_starships);
-            species=itemView.findViewById(R.id.r_species);
+            species=itemView.findViewById(R.id.r_species);*/
         }
     }
 }
