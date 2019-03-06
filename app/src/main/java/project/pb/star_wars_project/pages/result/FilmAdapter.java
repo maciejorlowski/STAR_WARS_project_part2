@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import project.pb.star_wars_project.R;
 import project.pb.star_wars_project.models.interfaces.models.Films;
@@ -27,7 +28,7 @@ public class FilmAdapter extends RecyclerView.Adapter<FilmAdapter.FilmViewHolder
     @Override
     public FilmViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         LayoutInflater inflater = LayoutInflater.from(mContext);
-        View view = inflater.inflate(R.layout.film_list_item,null);
+        View view = inflater.inflate(R.layout.film_single_item,null);
         return new FilmViewHolder(view);
     }
 
@@ -35,10 +36,11 @@ public class FilmAdapter extends RecyclerView.Adapter<FilmAdapter.FilmViewHolder
     public void onBindViewHolder(@NonNull FilmViewHolder filmViewHolder, int i) {
         Films film = filmsList.get(i);
         filmViewHolder.title.setText(film.getTitle());
-        filmViewHolder.episode_id.setText(film.getEpisode_id());
         filmViewHolder.director.setText(film.getDirector());
+        filmViewHolder.imageView.setImageResource(R.drawable.logo);
+        /*filmViewHolder.episode_id.setText(film.getEpisode_id());
         filmViewHolder.producer.setText(film.getProducer());
-        filmViewHolder.release_date.setText(film.getRelease_date());
+        filmViewHolder.release_date.setText(film.getRelease_date());*/
 
     }
 
@@ -49,16 +51,17 @@ public class FilmAdapter extends RecyclerView.Adapter<FilmAdapter.FilmViewHolder
 
     public class FilmViewHolder extends RecyclerView.ViewHolder {
 
-        TextView title,episode_id,director,producer,release_date;
-        Button planets,characters,vehicles,starships,species;
+        TextView title,director;
+        ImageView imageView;
         public FilmViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            title=itemView.findViewById(R.id.f_title);
-            episode_id=itemView.findViewById(R.id.f_episode_id);
-            director=itemView.findViewById(R.id.f_director);
+            title=itemView.findViewById(R.id.film_title);
+            director=itemView.findViewById(R.id.film_director_label);
+            imageView=itemView.findViewById(R.id.film_image_view);
+           /* episode_id=itemView.findViewById(R.id.f_episode_id);
             producer=itemView.findViewById(R.id.f_producer);
-            release_date=itemView.findViewById(R.id.f_release_date);
+            release_date=itemView.findViewById(R.id.f_release_date);*/
         }
     }
 }
