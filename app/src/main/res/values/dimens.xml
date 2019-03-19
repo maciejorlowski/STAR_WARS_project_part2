@@ -9,7 +9,7 @@
     <dimen name="dialog_height">180dp</dimen>
 
     <dimen name="exitdialog_width">240dp</dimen>
-    <dimen name="exitdialog_height">150dp</dimen>
+    <dimen name="exitdialog_height">200dp</dimen>
     <dimen name="image_size">80dp</dimen>
     <dimen name="margin_top">8dp</dimen>
 </resources>

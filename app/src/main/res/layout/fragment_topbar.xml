@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:app="http://schemas.android.com/apk/res-auto"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:background="@color/colorPrimaryDark"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent" android:layout_height="50dp"
                 android:paddingLeft="8dp"
-                android:paddingRight="8dp">
+                android:paddingRight="8dp"
+                tools:background="@color/basic_text">
+
 
     <android.support.v7.widget.AppCompatImageView
             android:id="@+id/top_go_back_btn"
@@ -23,12 +24,23 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20sp"
+            android:textColor="@color/color_topbar"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:text="@string/app_name"
             android:textStyle="normal|bold"/>
 
-    <ImageView
+    <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/topbar_sound_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/topbar_home_btn"
+            android:layout_marginEnd="10dp"
+            android:layout_centerVertical="true"
+            android:contentDescription="@null"
+            app:srcCompat="@android:drawable/ic_lock_silent_mode_off"/>
+
+    <android.support.v7.widget.AppCompatImageView
             android:id="@+id/topbar_home_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -37,4 +49,5 @@
             android:layout_centerVertical="true"
             android:contentDescription="@null"
             app:srcCompat="@android:drawable/ic_menu_info_details"/>
+
 </RelativeLayout>

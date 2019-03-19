@@ -14,7 +14,7 @@ import project.pb.star_wars_project.pages.dialogs.ExitDialog
 import project.pb.star_wars_project.pages.home.MenuFragment
 
 
-class TopBarFragment : BaseFragment(), TopBarInteractions {
+class TopBarFragment : BaseFragment(), TopBarInteractions, ExitDialog.ExitApplicationListener {
 
     private var music = true
 
@@ -27,6 +27,8 @@ class TopBarFragment : BaseFragment(), TopBarInteractions {
 
         top_go_back_btn.setOnClickListener(::onBackButtonPressed)
         topbar_home_btn.setOnClickListener(::onHomeButtonPressed)
+        topbar_sound_btn.setOnClickListener(::onSoundButtonPressed)
+
 
         Log.d("TAG", "onViewCreated")
     }
@@ -45,7 +47,19 @@ class TopBarFragment : BaseFragment(), TopBarInteractions {
 
     private fun onHomeButtonPressed(view: View){
         actions?.navManager?.clearStack()
-        actions?.navManager?.navigate(MenuFragment())
+        actions?.navManager?.navigate(MenuFragment(),false)
+    }
+
+    private fun onSoundButtonPressed(view: View){
+        if(music){
+            topbar_sound_btn.setImageResource(android.R.drawable.ic_lock_silent_mode)
+            music = !music
+            //TODO silence mod ON
+        } else {
+            topbar_sound_btn.setImageResource(android.R.drawable.ic_lock_silent_mode_off)
+            music = !music
+            //TODO silence mod OFF
+        }
     }
 
 
@@ -54,7 +68,9 @@ class TopBarFragment : BaseFragment(), TopBarInteractions {
     }
 
 
-
+    override fun onExitApplication() {
+        actions?.navManager?.goBack()
+    }
 
 
 }

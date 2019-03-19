@@ -8,4 +8,6 @@ interface MainInteractions {
     fun topBar(): TopBarInteractions
     fun backStackCount() : Int
 
+    fun isNetworkAvailable() : Boolean
+
 }

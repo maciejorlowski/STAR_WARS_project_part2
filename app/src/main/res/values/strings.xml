@@ -14,6 +14,9 @@
     <string name="enter_gravity">Enter gravity</string>
     <string name="enter_population">Enter population</string>
 
+    <string name="retryDialog_title">Internet Connection Required</string>
+    <string name="retryDialog_text">Please check your Internet connection</string>
+    <string name="retryDialog_connection_btn">Retry Connection</string>
     <string name="exitdialog_title">Activity Exit Alert</string>
     <string name="exitdialog_text">Are you sure want to exit?</string>
     <string name="yes_btn">YES</string>
@@ -24,6 +27,11 @@
     <string name="population">Population</string>
     <string name="classification">Classification</string>
     <string name="model">Model</string>
+
+    <string name="cancel_btn">Cancel</string>
+
+    <string name="toast_noConnection">Brak polaczenia z internetem</string>
+
 
 
 </resources>
