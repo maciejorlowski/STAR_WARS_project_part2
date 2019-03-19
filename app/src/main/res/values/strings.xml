@@ -1,29 +1,30 @@
 <resources>
     <string name="app_name">STAR_WARS_project</string>
 
-    <string name="enter_title">Enter title</string>
-    <string name="enter_model">Enter model</string>
-    <string name="enter_name">Enter name</string>
-    <string name="search_button">Search</string>
-    <string name="enter_birth_year">Enter birth year</string>
-    <string name="enter_class">Enter class</string>
-    <string name="enter_length">Enter length</string>
-    <string name="enter_classification">Enter classification</string>
-    <string name="enter_homeworld">Enter homeworld</string>
-    <string name="enter_diameter">Enter diameter</string>
-    <string name="enter_gravity">Enter gravity</string>
-    <string name="enter_population">Enter population</string>
+    <string name="enter_title">Wprowadź tytuł</string>
+    <string name="enter_model">Wprowadź model</string>
+    <string name="enter_name">Wprowadź nazwe</string>
+    <string name="search_button">Szukaj</string>
+    <string name="enter_birth_year">Wprowadź rok urodzenia</string>
+    <string name="enter_class">Wprowadź klasę</string>
+    <string name="enter_length">Wprowadź długość</string>
+    <string name="enter_classification">Wprowadź kwalifikację</string>
+    <string name="enter_homeworld">Wprowadź ojczyznę</string>
+    <string name="enter_diameter">Wprowadź średnicę</string>
+    <string name="enter_gravity">Wprowadź grawitację</string>
+    <string name="enter_population">Wprowadź populację</string>
 
-    <string name="exitdialog_title">Activity Exit Alert</string>
-    <string name="exitdialog_text">Are you sure want to exit?</string>
-    <string name="yes_btn">YES</string>
-    <string name="no_btn">NO</string>
-    <string name="more_button">More</string>
-    <string name="birth_year">Birth year</string>
-    <string name="director">Director</string>
-    <string name="population">Population</string>
-    <string name="classification">Classification</string>
+    <string name="exitdialog_title">Alarm wyjścia z aktywności</string>
+    <string name="exitdialog_text">Czy na pewno chcesz wyjść?</string>
+    <string name="yes_btn">TAK</string>
+    <string name="no_btn">NIE</string>
+    <string name="more_button">Więcej</string>
+    <string name="birth_year">Rok urodzenia</string>
+    <string name="director">Reżyser</string>
+    <string name="population">Populacja</string>
+    <string name="classification">Klasyfikacja</string>
     <string name="model">Model</string>
+    <string name="back_button">Cofnij</string>
 
 
 </resources>
