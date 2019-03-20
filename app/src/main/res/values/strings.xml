@@ -27,6 +27,7 @@
     <string name="population">Population</string>
     <string name="classification">Classification</string>
     <string name="model">Model</string>
+    <string name="back_button">BACK</string>
 
     <string name="cancel_btn">Cancel</string>
 
