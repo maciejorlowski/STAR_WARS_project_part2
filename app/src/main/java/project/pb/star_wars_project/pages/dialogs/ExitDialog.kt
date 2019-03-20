@@ -27,7 +27,7 @@ class ExitDialog : DialogFragment() {
         accept_btn.setOnClickListener(::onSubmitClicked)
         cancel_btn.setOnClickListener(::onCancelClicked)
 
-        dialog.setTitle(getString(R.string.exitdialog_title))
+//        dialog.setTitle(getString(R.string.exitdialog_title))
 
         dialog.window.setSoftInputMode(
             WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN
