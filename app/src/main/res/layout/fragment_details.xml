@@ -1,0 +1,1059 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:onClick="@{SearchingFragment.search}"
+            android:visibility="visible"
+            android:text="@string/back_button"/>
+    <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:id="@+id/Films" android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent">
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:padding="8dp">
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@id/tile_label"
+                    android:layout_marginLeft="8dp"
+                    android:id="@+id/f_title"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/f_title"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@id/id_label"
+                    android:id="@+id/f_episode_id"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="285dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/f_episode_id"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@id/director_label"
+                    android:id="@+id/f_director"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/f_director"
+                    android:id="@+id/f_producer"
+                    android:layout_toRightOf="@id/producer_label"
+                    android:layout_marginTop="8dp"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="75dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/f_producer"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@id/release_date_label"
+                    android:id="@+id/f_release_date"/>
+
+            <TextView
+                    android:text="Title "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="2dp"
+                    android:layout_alignParentTop="true"
+                    android:id="@+id/tile_label"
+                    android:layout_marginTop="8dp"/>
+
+            <TextView
+                    android:text="Episode id "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/id_label"
+                    android:layout_marginStart="2dp"
+                    android:layout_below="@id/tile_label"
+                    android:layout_marginTop="8dp"/>
+
+            <TextView
+                    android:text="Director "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/director_label"
+                    android:layout_marginStart="2dp"
+                    android:layout_below="@id/id_label"
+                    android:layout_marginTop="8dp"/>
+            <TextView
+                    android:text="Producer "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/producer_label"
+                    android:layout_marginStart="2dp"
+                    android:layout_below="@id/director_label"
+                    android:layout_marginTop="8dp"/>
+            <TextView
+                    android:text="Relase date "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/release_date_label"
+                    android:layout_marginStart="2dp"
+                    android:layout_below="@id/producer_label"
+                    android:layout_marginTop="8dp"/>
+
+
+        </RelativeLayout>
+    </android.support.constraint.ConstraintLayout>
+    <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:id="@+id/Planets"
+            android:visibility="visible"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:padding="8dp">
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@id/planet_name_pl"
+                    android:layout_marginLeft="8dp"
+                    android:id="@+id/pl_name_pl"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/pl_name_pl"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@id/rotation_period_pl"
+                    android:id="@+id/pl_rotation_per_pl"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/pl_rotation_per_pl"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@id/orbital_period_pl"
+                    android:id="@+id/pl_orbital_per_pl"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/pl_orbital_per_pl"
+                    android:id="@+id/pl_diameter_pl"
+                    android:layout_toRightOf="@id/diameter_pl"
+                    android:layout_marginTop="8dp"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="123dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/pl_diameter_pl"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@id/climate_pl"
+                    android:id="@+id/pl_climate_pl"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="126dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/pl_climate_pl"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@id/gravity_pl"
+                    android:id="@+id/pl_gravity_pl"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="292dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/pl_gravity_pl"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@id/terrain_pl"
+                    android:id="@+id/pl_terrain_pl"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/pl_terrain_pl"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@id/surface_label_pl"
+                    android:id="@+id/pl_surface_water_pl"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/population_label_pl"
+                    android:id="@+id/population_label_pl"
+                    android:layout_marginLeft="-100dp"
+                    android:layout_toEndOf="@+id/population" android:layout_marginStart="10dp"
+                    android:layout_marginTop="6dp" android:layout_below="@+id/pl_surface_water_pl"/>
+            <TextView
+                    android:text="Name "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="2dp"
+                    android:layout_alignParentTop="true"
+                    android:id="@+id/planet_name_pl"
+                    android:layout_marginTop="8dp"/>
+
+            <TextView
+                    android:text="Rotation period "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rotation_period_pl"
+                    android:layout_marginStart="2dp"
+                    android:layout_below="@id/planet_name_pl"
+                    android:layout_marginTop="8dp"/>
+
+            <TextView
+                    android:text="Orbital period "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/orbital_period_pl"
+                    android:layout_marginStart="2dp"
+                    android:layout_below="@id/rotation_period_pl"
+                    android:layout_marginTop="8dp"/>
+            <TextView
+                    android:text="Diameter "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/diameter_pl"
+                    android:layout_marginStart="2dp"
+                    android:layout_below="@id/orbital_period_pl"
+                    android:layout_marginTop="8dp"/>
+            <TextView
+                    android:text="Climate "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/climate_pl"
+                    android:layout_marginStart="2dp"
+                    android:layout_below="@id/diameter_pl"
+                    android:layout_marginTop="8dp"/>
+            <TextView
+                    android:text="Gravity "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/gravity_pl"
+                    android:layout_marginStart="2dp"
+                    android:layout_below="@id/climate_pl"
+                    android:layout_marginTop="8dp"/>
+            <TextView
+                    android:text="Terrain "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/terrain_pl"
+                    android:layout_marginStart="2dp"
+                    android:layout_below="@id/gravity_pl"
+                    android:layout_marginTop="8dp"/>
+            <TextView
+                    android:text="Surface water "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/surface_label_pl"
+                    android:layout_marginStart="2dp"
+                    android:layout_below="@id/terrain_pl"
+                    android:layout_marginTop="8dp"/>
+            <TextView
+                    android:text="Population "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/population"
+                    android:layout_marginStart="10dp"
+                    android:layout_below="@id/surface_label_pl"
+                    android:layout_marginTop="7dp" android:layout_alignParentStart="true"/>
+
+
+        </RelativeLayout>
+    </android.support.constraint.ConstraintLayout>
+    <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:id="@+id/People" android:visibility="visible"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent">
+        <TextView
+                android:text="TextView"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/name_people"
+                android:id="@+id/r_name"
+                android:layout_marginTop="32dp" app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/name_people" android:layout_marginStart="16dp"/>
+        <TextView
+                android:text="TextView"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/r_name"
+                android:layout_toRightOf="@id/height_people"
+                android:id="@+id/r_height"
+                android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/r_name"
+                android:visibility="visible" app:layout_constraintStart_toEndOf="@+id/height_people"
+                android:layout_marginStart="20dp"/>
+        <TextView
+                android:text="TextView"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/r_height"
+                android:layout_toRightOf="@id/mass_label"
+                android:id="@+id/r_mass"
+                app:layout_constraintStart_toEndOf="@+id/mass_label" android:layout_marginStart="36dp"
+                android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/r_height"/>
+        <TextView
+                android:text="TextView"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/r_mass"
+                android:id="@+id/r_hair_color"
+                android:layout_toRightOf="@id/hair_color_label_people"
+                app:layout_constraintStart_toEndOf="@+id/hair_color_label_people"
+                android:layout_marginStart="8dp" android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/r_mass"/>
+        <TextView
+                android:text="TextView"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/r_hair_color"
+                android:layout_toRightOf="@id/skin_color_label_people"
+                android:id="@+id/r_skin_color"
+                app:layout_constraintStart_toEndOf="@+id/skin_color_label_people" android:layout_marginStart="12dp"
+                app:layout_constraintTop_toBottomOf="@+id/r_hair_color" android:layout_marginTop="8dp"/>
+        <TextView
+                android:text="TextView"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/r_skin_color"
+                android:layout_toRightOf="@id/eye_color_label_people"
+                android:id="@+id/r_eye_color"
+                app:layout_constraintStart_toEndOf="@+id/eye_color_label_people" android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/r_skin_color"/>
+        <TextView
+                android:text="TextView"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/r_eye_color"
+                android:layout_toRightOf="@id/birth_year_label"
+                android:id="@+id/r_birth_year"
+                app:layout_constraintStart_toEndOf="@+id/birth_year_label" android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/r_eye_color"/>
+        <TextView
+                android:text="TextView"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/r_birth_year"
+                android:layout_toRightOf="@id/gender_label"
+                android:id="@+id/r_gender"
+                app:layout_constraintStart_toEndOf="@+id/gender_label" android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/r_birth_year"/>
+        <TextView
+                android:text="TextView"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/r_gender"
+                android:layout_toRightOf="@id/homeworld_label_people"
+                android:id="@+id/r_homeworld"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/r_gender"
+                app:layout_constraintStart_toEndOf="@+id/homeworld_label_people" android:layout_marginStart="8dp"/>
+
+        <TextView
+                android:text="Name "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:id="@+id/name_people"
+                android:layout_marginStart="8dp"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="32dp"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+                android:text="Height "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/height_people"
+                android:layout_below="@id/name_people"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/name_people" android:layout_marginStart="8dp"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+                android:text="Mass "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/mass_label"
+                android:layout_below="@id/height_people"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/height_people" android:layout_marginStart="8dp"
+                app:layout_constraintStart_toStartOf="parent"/>
+        <TextView
+                android:text="Hair color "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/hair_color_label_people"
+                android:layout_below="@id/mass_label"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/mass_label" android:layout_marginStart="8dp"
+                app:layout_constraintStart_toStartOf="parent"/>
+        <TextView
+                android:text="Skin color "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/skin_color_label_people"
+                android:layout_below="@id/hair_color_label_people"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/hair_color_label_people" android:layout_marginStart="8dp"
+                app:layout_constraintStart_toStartOf="parent"/>
+        <TextView
+                android:text="Eye color "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/eye_color_label_people"
+                android:layout_below="@id/skin_color_label_people"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/skin_color_label_people" android:layout_marginStart="8dp"
+                app:layout_constraintStart_toStartOf="parent"/>
+        <TextView
+                android:text="Birth year "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/birth_year_label"
+                android:layout_below="@id/eye_color_label_people"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/eye_color_label_people" android:layout_marginStart="8dp"
+                app:layout_constraintStart_toStartOf="parent"/>
+        <TextView
+                android:text="Gender "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/gender_label"
+                android:layout_below="@id/birth_year_label"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/birth_year_label" android:layout_marginStart="8dp"
+                app:layout_constraintStart_toStartOf="parent"/>
+        <TextView
+                android:text="Homeworld "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/homeworld_label_people"
+                android:layout_below="@id/gender_label"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/gender_label" android:layout_marginStart="8dp"
+                app:layout_constraintStart_toStartOf="parent"/>
+    </android.support.constraint.ConstraintLayout>
+    <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:id="@+id/Starships" android:visibility="visible">
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:padding="8dp">
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="179dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@id/name_label_st"
+                    android:layout_marginLeft="8dp"
+                    android:id="@+id/st_name"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="212dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/st_name"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@id/model_label_st"
+                    android:id="@+id/st_model"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="285dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/st_manufacturer"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@id/class_label_st"
+                    android:id="@+id/st_class"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="164dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/st_model"
+                    android:id="@+id/st_cost"
+                    android:layout_toRightOf="@id/cost_label_st"
+                    android:layout_marginTop="8dp"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="101dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/st_cost"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@id/lenght_label_st"
+                    android:id="@+id/st_length"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/st_length"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@id/speed_label_st"
+                    android:id="@+id/st_speed"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/st_speed"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@id/crew_label_st"
+                    android:id="@+id/st_crew"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/st_crew"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@id/passengers_label_st"
+                    android:id="@+id/st_passengers"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="230dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/st_passengers"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@id/cargo_capacity_label_st"
+                    android:id="@+id/st_cargo_capacity"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/st_cargo_capacity"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@id/cargo_capacity_label_st"
+                    android:id="@+id/st_comsumables"/>
+
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="317dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/st_comsumables"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@id/manufacturer_label_st"
+                    android:id="@+id/st_manufacturer"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="317dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/st_manufacturer"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@id/hyper_label_st"
+                    android:id="@+id/st_hyper"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="317dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/st_hyper"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@id/mglt_label_st"
+                    android:id="@+id/st_mglt"/>
+
+            <TextView
+                    android:text="Name "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="2dp"
+                    android:layout_alignParentTop="true"
+                    android:id="@+id/name_label_st"
+                    android:layout_marginTop="8dp"/>
+
+            <TextView
+                    android:text="Model "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/model_label_st"
+                    android:layout_marginStart="2dp"
+                    android:layout_below="@id/name_label_st"
+                    android:layout_marginTop="8dp"/>
+
+            <TextView
+                    android:text="Class "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/class_label_st"
+                    android:layout_marginStart="2dp"
+                    android:layout_below="@id/manufacturer_label_st"
+                    android:layout_marginTop="8dp"/>
+            <TextView
+                    android:text="Cost "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cost_label_st"
+                    android:layout_marginStart="2dp"
+                    android:layout_below="@id/model_label_st"
+                    android:layout_marginTop="8dp"/>
+            <TextView
+                    android:text="Lenght "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lenght_label_st"
+                    android:layout_marginStart="2dp"
+                    android:layout_below="@id/cost_label_st"
+                    android:layout_marginTop="8dp"/>
+            <TextView
+                    android:text="Max speed "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/speed_label_st"
+                    android:layout_marginStart="2dp"
+                    android:layout_below="@id/lenght_label_st"
+                    android:layout_marginTop="8dp"/>
+            <TextView
+                    android:text="Crew "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/crew_label_st"
+                    android:layout_marginStart="2dp"
+                    android:layout_below="@id/speed_label_st"
+                    android:layout_marginTop="8dp"/>
+            <TextView
+                    android:text="Passengers "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/passengers_label_st"
+                    android:layout_marginStart="2dp"
+                    android:layout_below="@id/crew_label_st"
+                    android:layout_marginTop="8dp"/>
+            <TextView
+                    android:text="Cargo capacity "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cargo_capacity_label_st"
+                    android:layout_marginStart="2dp"
+                    android:layout_below="@id/passengers_label_st"
+                    android:layout_marginTop="8dp"/>
+            <TextView
+                    android:text="Consumables "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/consumables_label_st"
+                    android:layout_marginStart="2dp"
+                    android:layout_below="@id/cargo_capacity_label_st"
+                    android:layout_marginTop="8dp"/>
+
+            <TextView
+                    android:text="Manufacturer "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/manufacturer_label_st"
+                    android:layout_marginStart="2dp"
+                    android:layout_below="@id/consumables_label_st"
+                    android:layout_marginTop="8dp"/>
+            <TextView
+                android:text="Hyper drive rating "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/hyper_label_st"
+                android:layout_marginStart="2dp"
+                android:layout_below="@id/manufacturer_label_st"
+                android:layout_marginTop="8dp"/>
+            <TextView
+                    android:text="MGLT "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/mglt_label_st"
+                    android:layout_marginStart="2dp"
+                    android:layout_below="@id/hyper_label_st"
+                    android:layout_marginTop="8dp"/>
+
+
+        </RelativeLayout>
+
+    </android.support.constraint.ConstraintLayout>
+    <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:id="@+id/Vehicles" android:visibility="visible">
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:padding="8dp">
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="179dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@id/name_label_v"
+                    android:layout_marginLeft="8dp"
+                    android:id="@+id/v_name"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="212dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/v_name"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@id/model_label_v"
+                    android:id="@+id/v_model"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="285dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/v_manufacturer"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@id/class_label_v"
+                    android:id="@+id/v_class"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="164dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/v_model"
+                    android:id="@+id/v_cost"
+                    android:layout_toRightOf="@id/cost_label_v"
+                    android:layout_marginTop="8dp"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="101dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/v_cost"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@id/lenght_label_v"
+                    android:id="@+id/v_length"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/v_length"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@id/speed_label_v"
+                    android:id="@+id/v_speed"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/v_speed"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@id/crew_label_v"
+                    android:id="@+id/v_crew"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/v_crew"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@id/passengers_label_v"
+                    android:id="@+id/v_passengers"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="230dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/v_passengers"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@id/cargo_capacity_label_v"
+                    android:id="@+id/v_cargo_capacity"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/v_cargo_capacity"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@id/cargo_capacity_label_v"
+                    android:id="@+id/v_comsumables"/>
+
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="317dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/v_comsumables"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@id/manufacturer_label_v"
+                    android:id="@+id/v_manufacturer"/>
+
+            <TextView
+                    android:text="Name "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="2dp"
+                    android:layout_alignParentTop="true"
+                    android:id="@+id/name_label_v"
+                    android:layout_marginTop="8dp"/>
+
+            <TextView
+                    android:text="Model "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/model_label_v"
+                    android:layout_marginStart="2dp"
+                    android:layout_below="@id/name_label_v"
+                    android:layout_marginTop="8dp"/>
+
+            <TextView
+                    android:text="Class "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/class_label_v"
+                    android:layout_marginStart="2dp"
+                    android:layout_below="@id/manufacturer_label_v"
+                    android:layout_marginTop="8dp"/>
+            <TextView
+                    android:text="Cost "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cost_label_v"
+                    android:layout_marginStart="2dp"
+                    android:layout_below="@id/model_label_v"
+                    android:layout_marginTop="8dp"/>
+            <TextView
+                    android:text="Lenght "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lenght_label_v"
+                    android:layout_marginStart="2dp"
+                    android:layout_below="@id/cost_label_v"
+                    android:layout_marginTop="8dp"/>
+            <TextView
+                    android:text="Max speed "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/speed_label_v"
+                    android:layout_marginStart="2dp"
+                    android:layout_below="@id/lenght_label_v"
+                    android:layout_marginTop="8dp"/>
+            <TextView
+                    android:text="Crew "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/crew_label_v"
+                    android:layout_marginStart="2dp"
+                    android:layout_below="@id/speed_label_v"
+                    android:layout_marginTop="8dp"/>
+            <TextView
+                    android:text="Passengers "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/passengers_label_v"
+                    android:layout_marginStart="2dp"
+                    android:layout_below="@id/crew_label_v"
+                    android:layout_marginTop="8dp"/>
+            <TextView
+                    android:text="Cargo capacity "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cargo_capacity_label_v"
+                    android:layout_marginStart="2dp"
+                    android:layout_below="@id/passengers_label_v"
+                    android:layout_marginTop="8dp"/>
+            <TextView
+                    android:text="Consumables "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/consumables_label_v"
+                    android:layout_marginStart="2dp"
+                    android:layout_below="@id/cargo_capacity_label_v"
+                    android:layout_marginTop="8dp"/>
+
+            <TextView
+                    android:text="Manufacturer "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/manufacturer_label_v"
+                    android:layout_marginStart="2dp"
+                    android:layout_below="@id/consumables_label_v"
+                    android:layout_marginTop="8dp"/>
+
+
+        </RelativeLayout>
+
+    </android.support.constraint.ConstraintLayout>
+    <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:id="@+id/Species" android:visibility="visible">
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:padding="8dp">
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@id/name_label"
+                    android:layout_marginLeft="8dp"
+                    android:id="@+id/sp_name"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/sp_name"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@id/height_label"
+                    android:id="@+id/sp_height"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/sp_height"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@id/classification_label"
+                    android:id="@+id/sp_classification"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/sp_classification"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@id/designation_label"
+                    android:id="@+id/sp_designation"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/sp_designation"
+                    android:id="@+id/sp_hair_color"
+                    android:layout_toRightOf="@id/hair_color_label"
+                    android:layout_marginTop="8dp"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/sp_hair_color"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@id/skin_color_label"
+                    android:id="@+id/sp_skin_color"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/sp_skin_color"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@id/eye_color_label"
+                    android:id="@+id/sp_eye_color"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/sp_eye_color"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@id/language_label"
+                    android:id="@+id/sp_language"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/sp_language"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@id/av_lifespan_label"
+                    android:id="@+id/sp_av_lifespan"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/sp_av_lifespan"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@id/homeworld_label"
+                    android:id="@+id/sp_homeworld"/>
+
+            <TextView
+                    android:text="Name "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="2dp"
+                    android:layout_alignParentTop="true"
+                    android:id="@+id/name_label"
+                    android:layout_marginTop="8dp"/>
+
+            <TextView
+                    android:text="Average height "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/height_label"
+                    android:layout_marginStart="2dp"
+                    android:layout_below="@id/name_label"
+                    android:layout_marginTop="8dp"/>
+            <TextView
+                    android:text="Classification "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/classification_label"
+                    android:layout_marginStart="2dp"
+                    android:layout_below="@id/height_label"
+                    android:layout_marginTop="8dp"/>
+            <TextView
+                    android:text="Designation "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/designation_label"
+                    android:layout_marginStart="2dp"
+                    android:layout_below="@id/classification_label"
+                    android:layout_marginTop="8dp"/>
+            <TextView
+                    android:text="Hair color "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/hair_color_label"
+                    android:layout_marginStart="2dp"
+                    android:layout_below="@id/designation_label"
+                    android:layout_marginTop="8dp"/>
+            <TextView
+                    android:text="Skin color "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/skin_color_label"
+                    android:layout_marginStart="2dp"
+                    android:layout_below="@id/hair_color_label"
+                    android:layout_marginTop="8dp"/>
+            <TextView
+                    android:text="Eye color "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/eye_color_label"
+                    android:layout_marginStart="2dp"
+                    android:layout_below="@id/skin_color_label"
+                    android:layout_marginTop="8dp"/>
+            <TextView
+                    android:text="Language "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/language_label"
+                    android:layout_marginStart="2dp"
+                    android:layout_below="@id/eye_color_label"
+                    android:layout_marginTop="8dp"/>
+            <TextView
+                    android:text="Average lifespan "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/av_lifespan_label"
+                    android:layout_marginStart="2dp"
+                    android:layout_below="@id/language_label"
+                    android:layout_marginTop="8dp"/>
+            <TextView
+                    android:text="Homeworld "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/homeworld_label"
+                    android:layout_marginStart="2dp"
+                    android:layout_below="@id/av_lifespan_label"
+                    android:layout_marginTop="8dp"/>
+
+
+        </RelativeLayout>
+
+
+    </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>

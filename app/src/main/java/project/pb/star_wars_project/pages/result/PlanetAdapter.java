@@ -3,6 +3,7 @@ package project.pb.star_wars_project.pages.result;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
+import android.support.v4.app.FragmentActivity;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,7 +11,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 import project.pb.star_wars_project.R;
+import project.pb.star_wars_project.functional.navigation.NavManager;
 import project.pb.star_wars_project.models.interfaces.models.People;
 import project.pb.star_wars_project.models.interfaces.models.Planets;
 
@@ -37,7 +40,7 @@ public class PlanetAdapter extends RecyclerView.Adapter<PlanetAdapter.PlanetView
 
     @Override
     public void onBindViewHolder(@NonNull PlanetAdapter.PlanetViewHolder planetViewHolder, int i) {
-        Planets planet = planetsList.get(i);
+        final Planets planet = planetsList.get(i);
         planetViewHolder.name.setText(planet.getName());
         planetViewHolder.population.setText(planet.getPopulation());
         planetViewHolder.imageView.setImageResource(R.drawable.logo);
@@ -48,6 +51,17 @@ public class PlanetAdapter extends RecyclerView.Adapter<PlanetAdapter.PlanetView
         planetViewHolder.gravity.setText(planet.getGravity());
         planetViewHolder.terrain.setText(planet.getTerrain());
         planetViewHolder.surface_water.setText(planet.getSurface_water());*/
+        planetViewHolder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(mContext, "Recycle Click", Toast.LENGTH_SHORT).show();
+                DetailFragment detailFragment = new DetailFragment();
+                detailFragment.setPlanet(planet);
+                detailFragment.setSelect(6);
+                NavManager navManager = new NavManager((FragmentActivity) mContext);
+                navManager.navigate(detailFragment, true);
+            }
+        });
     }
 
     @Override
