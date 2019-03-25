@@ -2,6 +2,7 @@ package project.pb.star_wars_project.pages.result;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
+import android.support.v4.app.FragmentActivity;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,7 +10,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 import project.pb.star_wars_project.R;
+import project.pb.star_wars_project.functional.navigation.NavManager;
 import project.pb.star_wars_project.models.interfaces.models.Films;
 import project.pb.star_wars_project.models.interfaces.models.People;
 import project.pb.star_wars_project.pages.searching.SearchingFragment;
@@ -40,7 +43,7 @@ public class PeopleAdapter extends RecyclerView.Adapter<PeopleAdapter.PeopleView
     @Override
     public void onBindViewHolder(@NonNull PeopleViewHolder peopleViewHolder, int i) {
 
-        People people = peopleList.get(i);
+        final People people = peopleList.get(i);
         peopleViewHolder.name.setText(people.getName());
         peopleViewHolder.birth_year.setText(people.getBirth_year());
         peopleViewHolder.imageView.setImageResource(R.drawable.logo);
@@ -51,6 +54,17 @@ public class PeopleAdapter extends RecyclerView.Adapter<PeopleAdapter.PeopleView
         peopleViewHolder.eye_color.setText(people.getEye_color());
         peopleViewHolder.gender.setText(people.getGender());
         peopleViewHolder.homeworld.setText(people.getHomeworld());*/
+        peopleViewHolder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(mContext, "Recycle Click", Toast.LENGTH_SHORT).show();
+                DetailFragment detailFragment = new DetailFragment();
+                detailFragment.setPeople(people);
+                detailFragment.setSelect(1);
+                NavManager navManager = new NavManager((FragmentActivity) mContext);
+                navManager.navigate(detailFragment, true);
+            }
+        });
 
     }
 

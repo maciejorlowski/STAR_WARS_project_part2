@@ -2,13 +2,16 @@ package project.pb.star_wars_project.pages.result;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
+import android.support.v4.app.FragmentActivity;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 import project.pb.star_wars_project.R;
+import project.pb.star_wars_project.functional.navigation.NavManager;
 import project.pb.star_wars_project.models.interfaces.models.Starships;
 
 import java.util.List;
@@ -33,7 +36,7 @@ public class StarshipsAdapter extends RecyclerView.Adapter<StarshipsAdapter.Star
 
     @Override
     public void onBindViewHolder(@NonNull StarshipsViewHolder starshipsViewHolder, int i) {
-        Starships starship = starshipsList.get(i);
+        final Starships starship = starshipsList.get(i);
         starshipsViewHolder.name.setText(starship.getName());
         starshipsViewHolder.model.setText(starship.getModel());
         starshipsViewHolder.imageView.setImageResource(R.drawable.logo);
@@ -48,6 +51,17 @@ public class StarshipsAdapter extends RecyclerView.Adapter<StarshipsAdapter.Star
         starshipsViewHolder.hyperdrive.setText(starship.getHyperdrive_rating());
         starshipsViewHolder.mglt.setText(starship.getMGLT());
         starshipsViewHolder.ship_class.setText(starship.getStarship_class());*/
+        starshipsViewHolder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(mContext, "Recycle Click", Toast.LENGTH_SHORT).show();
+                DetailFragment detailFragment = new DetailFragment();
+                detailFragment.setStarship(starship);
+                detailFragment.setSelect(3);
+                NavManager navManager = new NavManager((FragmentActivity) mContext);
+                navManager.navigate(detailFragment, true);
+            }
+        });
 
 
     }
