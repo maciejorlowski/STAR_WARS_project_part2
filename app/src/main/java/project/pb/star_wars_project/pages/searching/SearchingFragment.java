@@ -16,6 +16,7 @@ import project.pb.star_wars_project.functional.rest.Rest;
 import project.pb.star_wars_project.functional.rest.RestInterface;
 import project.pb.star_wars_project.models.interfaces.models.People;
 import project.pb.star_wars_project.models.interfaces.models.ResultsPeople;
+import project.pb.star_wars_project.pages.dialogs.RetryConnectionDialog;
 import project.pb.star_wars_project.pages.result.ResultFragment;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -26,7 +27,7 @@ import java.util.List;
 
 import static java.lang.Thread.sleep;
 
-public class SearchingFragment extends BaseFragment  implements AdapterView.OnItemSelectedListener {
+public class SearchingFragment extends BaseFragment  implements AdapterView.OnItemSelectedListener, RetryConnectionDialog.RetryConnection {
 
 
 
@@ -76,6 +77,10 @@ public class SearchingFragment extends BaseFragment  implements AdapterView.OnIt
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        if(!getActions().isNetworkAvailable()){
+            retryConnection();
+        }
 
 
          name = getView().findViewById(R.id.name);
@@ -148,6 +153,22 @@ public class SearchingFragment extends BaseFragment  implements AdapterView.OnIt
                 search();
             }
         });
+    }
+
+    private void retryConnection(){
+        RetryConnectionDialog dialog = new RetryConnectionDialog();
+        dialog.setTargetFragment(this, 300);
+        dialog.setCancelable(false);
+        dialog.show(getFragmentManager(), "dialog");
+    }
+
+    @Override
+    public void onFinishConnection(boolean success) {
+        if (success) {
+            getActions().getNavManager().navigate(new SearchingFragment(), false);
+        } else {
+            getActions().getNavManager().goBack();
+        }
     }
 
     public void clearArea(){
@@ -320,5 +341,7 @@ public class SearchingFragment extends BaseFragment  implements AdapterView.OnIt
     public void onNothingSelected(AdapterView<?> parent) {
 
     }
+
+
 }
 
