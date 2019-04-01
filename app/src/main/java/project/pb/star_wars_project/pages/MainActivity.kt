@@ -1,5 +1,8 @@
 package project.pb.star_wars_project.pages
 
+import android.content.Context
+import android.net.ConnectivityManager
+import android.net.NetworkInfo
 import android.os.Bundle
 import android.support.v4.app.FragmentActivity
 import project.pb.star_wars_project.models.interfaces.MainInteractions
@@ -36,5 +39,13 @@ class MainActivity : FragmentActivity(), MainInteractions {
 
     override fun backStackCount(): Int {
         return supportFragmentManager.backStackEntryCount
+    }
+
+    override fun isNetworkAvailable(): Boolean {
+        val connectivityManager = this.getSystemService(Context.CONNECTIVITY_SERVICE)
+        return if (connectivityManager is ConnectivityManager) {
+            val networkInfo: NetworkInfo? = connectivityManager.activeNetworkInfo
+            networkInfo?.isConnected ?: false
+        } else false
     }
 }
