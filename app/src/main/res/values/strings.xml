@@ -22,17 +22,13 @@
     <string name="yes_btn">YES</string>
     <string name="no_btn">NO</string>
     <string name="more_button">More</string>
+    <string name="delete_button">Delete</string>
     <string name="birth_year">Birth year</string>
     <string name="director">Director</string>
     <string name="population">Population</string>
     <string name="classification">Classification</string>
     <string name="model">Model</string>
     <string name="back_button">BACK</string>
-
     <string name="cancel_btn">Cancel</string>
-
     <string name="toast_noConnection">Brak polaczenia z internetem</string>
-
-
-
 </resources>
