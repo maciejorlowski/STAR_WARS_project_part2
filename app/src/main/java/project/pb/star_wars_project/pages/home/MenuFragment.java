@@ -10,10 +10,12 @@ import android.widget.ImageButton;
 import project.pb.star_wars_project.R;
 import project.pb.star_wars_project.base.BaseFragment;
 import project.pb.star_wars_project.pages.searching.SearchingFragment;
+import project.pb.star_wars_project.youtube.YouTubeFragment;
 
 public class MenuFragment extends BaseFragment {
 
     private ImageButton imageButton1;
+    private ImageButton imageButton2;
 
     @Nullable
     @Override
@@ -33,7 +35,14 @@ public class MenuFragment extends BaseFragment {
                 getActions().getNavManager().navigate(SearchingFragment.getsInstance(), true);            }
         });
 
-        //        imageButton1 = getView().findViewById(R.id.);
+        ImageButton youtubeButton = view.findViewById(R.id.imageButton2);
+        youtubeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getActions().getNavManager().navigate(YouTubeFragment.getyInstance(),true);
+            }
+        });
+
         //tutaj piszesz kod
     }
 }
