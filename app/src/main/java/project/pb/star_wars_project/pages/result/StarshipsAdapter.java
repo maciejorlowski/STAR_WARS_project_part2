@@ -9,7 +9,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 import project.pb.star_wars_project.R;
 import project.pb.star_wars_project.functional.navigation.NavManager;
 import project.pb.star_wars_project.models.interfaces.models.Starships;
@@ -40,21 +39,9 @@ public class StarshipsAdapter extends RecyclerView.Adapter<StarshipsAdapter.Star
         starshipsViewHolder.name.setText(starship.getName());
         starshipsViewHolder.model.setText(starship.getModel());
         starshipsViewHolder.imageView.setImageResource(R.drawable.logo);
-        /*starshipsViewHolder.manufacturer.setText(starship.getManufacturer());
-        starshipsViewHolder.cost.setText(starship.getCost_in_credits());
-        starshipsViewHolder.lenght.setText(starship.getLength());
-        starshipsViewHolder.max_speed.setText(starship.getMax_atmosphering_speed());
-        starshipsViewHolder.crew.setText(starship.getCrew());
-        starshipsViewHolder.passengers.setText(starship.getPassengers());
-        starshipsViewHolder.cargo_capacity.setText(starship.getCargo_capacity());
-        starshipsViewHolder.consumables.setText(starship.getConsumables());
-        starshipsViewHolder.hyperdrive.setText(starship.getHyperdrive_rating());
-        starshipsViewHolder.mglt.setText(starship.getMGLT());
-        starshipsViewHolder.ship_class.setText(starship.getStarship_class());*/
         starshipsViewHolder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(mContext, "Recycle Click", Toast.LENGTH_SHORT).show();
                 DetailFragment detailFragment = new DetailFragment();
                 detailFragment.setStarship(starship);
                 detailFragment.setSelect(3);
@@ -82,17 +69,6 @@ public class StarshipsAdapter extends RecyclerView.Adapter<StarshipsAdapter.Star
             name=itemView.findViewById(R.id.starship_name);
             model=itemView.findViewById(R.id.starship_model_label);
             imageView=itemView.findViewById(R.id.starship_image_view);
-            /* manufacturer=itemView.findViewById(R.id.st_manufacturer);
-            cost=itemView.findViewById(R.id.st_cost);
-            lenght=itemView.findViewById(R.id.st_length);
-            max_speed=itemView.findViewById(R.id.st_speed);
-            crew=itemView.findViewById(R.id.st_crew);
-            passengers=itemView.findViewById(R.id.st_passengers);
-            cargo_capacity=itemView.findViewById(R.id.st_cargo_capacity);
-            consumables=itemView.findViewById(R.id.st_comsumables);
-            hyperdrive=itemView.findViewById(R.id.st_hyperdrive);
-            mglt=itemView.findViewById(R.id.st_mglt);
-            ship_class=itemView.findViewById(R.id.st_class);*/
         }
     }
 }

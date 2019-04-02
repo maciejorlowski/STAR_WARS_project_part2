@@ -7,10 +7,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 import project.pb.star_wars_project.R;
 import project.pb.star_wars_project.functional.navigation.NavManager;
 import project.pb.star_wars_project.models.interfaces.models.Films;
@@ -41,13 +39,9 @@ public class FilmAdapter extends RecyclerView.Adapter<FilmAdapter.FilmViewHolder
         filmViewHolder.title.setText(film.getTitle());
         filmViewHolder.director.setText(film.getDirector());
         filmViewHolder.imageView.setImageResource(R.drawable.logo);
-        /*filmViewHolder.episode_id.setText(film.getEpisode_id());
-        filmViewHolder.producer.setText(filmi.getProducer());
-        filmViewHolder.release_date.setText(film.getRelease_date());*/
         filmViewHolder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(mContext, "Recycle Click", Toast.LENGTH_SHORT).show();
                 DetailFragment detailFragment = new DetailFragment();
                 detailFragment.setFilms(film);
                 detailFragment.setSelect(2);
@@ -74,9 +68,6 @@ public class FilmAdapter extends RecyclerView.Adapter<FilmAdapter.FilmViewHolder
             title=itemView.findViewById(R.id.film_title);
             director=itemView.findViewById(R.id.film_director_label);
             imageView=itemView.findViewById(R.id.film_image_view);
-           /* episode_id=itemView.findViewById(R.id.f_episode_id);
-            producer=itemView.findViewById(R.id.f_producer);
-            release_date=itemView.findViewById(R.id.f_release_date);*/
         }
     }
 }

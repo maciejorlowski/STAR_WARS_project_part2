@@ -9,7 +9,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 import project.pb.star_wars_project.R;
 import project.pb.star_wars_project.functional.navigation.NavManager;
 import project.pb.star_wars_project.models.interfaces.models.Vehicles;
@@ -40,19 +39,9 @@ public class VehiclesAdapter extends RecyclerView.Adapter<VehiclesAdapter.Vehicl
         vehiclesViewHolder.name.setText(vehicle.getName());
         vehiclesViewHolder.model.setText(vehicle.getModel());
         vehiclesViewHolder.imageView.setImageResource(R.drawable.logo);
-        /*vehiclesViewHolder.manufacturer.setText(vehicle.getManufacturer());
-        vehiclesViewHolder.cost.setText(vehicle.getCost_in_credits());
-        vehiclesViewHolder.lenght.setText(vehicle.getLength());
-        vehiclesViewHolder.max_speed.setText(vehicle.getMax_atmosphering_speed());
-        vehiclesViewHolder.crew.setText(vehicle.getCrew());
-        vehiclesViewHolder.passengers.setText(vehicle.getPassengers());
-        vehiclesViewHolder.cargo_capacity.setText(vehicle.getCargo_capacity());
-        vehiclesViewHolder.consumables.setText(vehicle.getConsumables());
-        vehiclesViewHolder.vehicle_class.setText(vehicle.getVehicle_class());*/
         vehiclesViewHolder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(mContext, "Recycle Click", Toast.LENGTH_SHORT).show();
                 DetailFragment detailFragment = new DetailFragment();
                 detailFragment.setVehicle(vehicle);
                 detailFragment.setSelect(4);
@@ -77,15 +66,6 @@ public class VehiclesAdapter extends RecyclerView.Adapter<VehiclesAdapter.Vehicl
             name=itemView.findViewById(R.id.vehicle_name);
             model=itemView.findViewById(R.id.vehicle_model_label);
             imageView=itemView.findViewById(R.id.vehicle_image_view);
-           /* manufacturer=itemView.findViewById(R.id.v_manufacturer);
-            cost=itemView.findViewById(R.id.v_cost);
-            lenght=itemView.findViewById(R.id.v_length);
-            max_speed=itemView.findViewById(R.id.v_speed);
-            crew=itemView.findViewById(R.id.v_crew);
-            passengers=itemView.findViewById(R.id.v_passengers);
-            cargo_capacity=itemView.findViewById(R.id.v_cargo_capacity);
-            consumables=itemView.findViewById(R.id.v_comsumables);
-            vehicle_class=itemView.findViewById(R.id.v_class);*/
         }
     }
 }
