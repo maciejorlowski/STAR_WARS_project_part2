@@ -8,5 +8,7 @@
     <color name="color_topbar">#FFFFFF</color>
     <color name="dialog_background">#FFFFFF</color>
     <color name="basic_text">#ff0099cc</color>
+    <color name="gallery_background">#997a00</color>
+    <color name="semiTransparent">#20ffffb0</color>
 
 </resources>

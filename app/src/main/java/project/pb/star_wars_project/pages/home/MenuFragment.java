@@ -9,7 +9,8 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import project.pb.star_wars_project.R;
 import project.pb.star_wars_project.base.BaseFragment;
-import project.pb.star_wars_project.pages.favorite.FavoriteFragment;
+
+import project.pb.star_wars_project.pages.gallery.GalleryFragment;
 import project.pb.star_wars_project.pages.searching.SearchingFragment;
 import project.pb.star_wars_project.youtube.YouTubeFragment;
 
@@ -36,18 +37,19 @@ public class MenuFragment extends BaseFragment {
             public void onClick(View v) {
                 getActions().getNavManager().navigate(SearchingFragment.getsInstance(), true);            }
         });
-        testButton.setOnClickListener(new View.OnClickListener(){
+        ImageButton gallery = view.findViewById(R.id.imageButton6);
+        gallery.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getActions().getNavManager().navigate(FavoriteFragment.getsInstance(), true);
-            }
-        });
+                GalleryFragment galleryFragment = new GalleryFragment();
+                getActions().getNavManager().navigate(galleryFragment,true);
 
         ImageButton youtubeButton = view.findViewById(R.id.imageButton2);
         youtubeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 getActions().getNavManager().navigate(YouTubeFragment.getyInstance(),true);
+
             }
         });
 

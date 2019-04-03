@@ -8,6 +8,7 @@ import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 import project.pb.star_wars_project.R;
 import project.pb.star_wars_project.base.BaseFragment;
@@ -28,6 +29,7 @@ public class DetailFragment extends BaseFragment {
     private TextView classification,designation,language,avarage_life_span;
     private TextView model,cost,length,max_speed,crew ,passengers,cargo,consumables,manufacturer,v_class;
     private TextView hyper,mglt;
+    private Button back;
 
     private Films films;
     private People people;
@@ -103,6 +105,13 @@ public class DetailFragment extends BaseFragment {
                 viewPlanet();
                 break;
         }
+        back = view.findViewById(R.id.button);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getActions().getNavManager().goBack();
+            }
+        });
 
     }
 
