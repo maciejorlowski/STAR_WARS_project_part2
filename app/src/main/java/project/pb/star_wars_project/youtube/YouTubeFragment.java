@@ -16,28 +16,30 @@ import java.util.Vector;
 
 public class YouTubeFragment extends BaseFragment {
 
+    private static YouTubeFragment youtubeInstance=null;
 
-    private static YouTubeFragment yInstance;
-
-    public static YouTubeFragment getyInstance(){
-        if(yInstance==null){
-            yInstance=new YouTubeFragment();
+    public static YouTubeFragment getYouTubeInstance(){
+        if(youtubeInstance==null){
+            youtubeInstance=new YouTubeFragment();
         }
-        return yInstance;
+        return youtubeInstance;
     }
 
-    RecyclerView recyclerView;
-    Vector<YouTubeVideos> youtubeVideos = new Vector<YouTubeVideos>();
+    //RecyclerView recyclerView;
+    //Vector<YouTubeVideos> youtubeVideos = new Vector<YouTubeVideos>();
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.youtube_layout, container, false);
+        return inflater.inflate(R.layout.result_fragment, container, false);
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        RecyclerView recyclerView;
+        Vector<YouTubeVideos> youtubeVideos = new Vector<YouTubeVideos>();
 
         recyclerView = (RecyclerView) getView().findViewById(R.id.recyclerview);
         recyclerView.setHasFixedSize(true);

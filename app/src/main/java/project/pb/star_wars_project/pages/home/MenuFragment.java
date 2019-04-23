@@ -10,7 +10,7 @@ import android.widget.ImageButton;
 import project.pb.star_wars_project.R;
 import project.pb.star_wars_project.base.BaseFragment;
 import project.pb.star_wars_project.pages.searching.SearchingFragment;
-import project.pb.star_wars_project.youtube.YouTubeFragment;
+import project.pb.star_wars_project.pages.gallery.YouTubeGalleryFragment;
 
 public class MenuFragment extends BaseFragment {
 
@@ -35,11 +35,11 @@ public class MenuFragment extends BaseFragment {
                 getActions().getNavManager().navigate(SearchingFragment.getsInstance(), true);            }
         });
 
-        ImageButton youtubeButton = view.findViewById(R.id.imageButton2);
-        youtubeButton.setOnClickListener(new View.OnClickListener() {
+        ImageButton youtubeGalleryButton = view.findViewById(R.id.imageButton2);
+        youtubeGalleryButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getActions().getNavManager().navigate(YouTubeFragment.getyInstance(),true);
+                getActions().getNavManager().navigate(YouTubeGalleryFragment.getYouTubeGalleryInstance(),true);
             }
         });
 
