@@ -4,13 +4,17 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
 
+
+    <color name="color_topbar">#FFFFFF</color>
+    <color name="dialog_background">#ffffff</color>
     <color name="basic_text">#ff0099cc</color>
     <color name="milk_white">#E8E7E3</color>
-    <color name="bloody_mery">#E82300</color>
+    <color name="bloody_mery">#FF0000</color>
     <color name="deep_dark">#000000</color>
     <color name="button_pressed">#969696</color>
     <color name="spinner_bacground">#3979E8</color>
-
+    <color name="juicy_green">#22A32A</color>
     <color name="button_focused">#3D3D3D</color>
+    <color name="normal_grey">#454545</color>
 
 </resources>

@@ -1,0 +1,682 @@
+ [
+        {
+          "category":"people",
+          "question": "Which of these last names does Leia NOT have a family connection to?",
+          "answers": [
+            "Skywalker",
+            "Amidala",
+            "Fett",
+            "Organa"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "category":"people",
+          "question": "Who does R2 NOT carry a message for?",
+          "answers": [
+            "Leia",
+            "Han",
+            "Luke",
+            "Vader"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "category":"people",
+          "question": "Obi-Wan learned to become one with the force from...?",
+          "answers": [
+            "Mace Windu",
+            "Qui-Gon Jinn",
+            "Yoda",
+            "Darth Maul"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "category":"people",
+          "question": "How tall is Chewbacca?",
+          "answers": [
+            "228cm",
+            "192cm",
+            "323cm",
+            "222cm"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "category":"people",
+          "question": "What is the name of Luke�s childhood best friend, who later served alongside him in the Rebellion?",
+          "answers": [
+            "Wedge Antilles",
+            "Nien Numb",
+            "Mace Windu",
+            "Biggs Darklighter"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "category":"people",
+          "question": "What is Princess Leia's adoptive mother's name?",
+          "answers": [
+            "Queen Berha Organa",
+            "Padm� Amidala Naberrie",
+            "Mon Mothma",
+            "Ayla Secura"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "category":"people",
+          "question": " Obi-Wan Kenobi was born on the planet of:",
+          "answers": [
+            "Coruscant",
+            "Stewjon",
+            "Alderaan",
+            "Yavin IV"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "category":"people",
+          "question": "What is Yoda's last name?",
+          "answers": [
+            "Fett",
+            "Sith",
+            "Organa",
+            "Dont have any"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "category":"people",
+          "question": "Who is Luke and Leia's mother?",
+          "answers": [
+            "Queen Berha Organa",
+            "Padm� Amidala Naberrie",
+            "Mon Mothma",
+            "Ayla Secura"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "category":"people",
+          "question": "Who is Luke and Leia's father?",
+          "answers": [
+            "Qui-Gon Jinn",
+            "Nien Numb",
+            "Anakin Skywalker",
+            "Ayla Secura"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "category":"people",
+          "question": "What color eyes does Luke Skywalker have?",
+          "answers": [
+            "Red",
+            "Green",
+            "Blue",
+            "Dark brown"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "category":"people",
+          "question": "What color eyes does Han Solo have?",
+          "answers": [
+            "Red",
+            "Green",
+            "Blue",
+            "Brown"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "category":"people",
+          "question": "What color eyes does Darth Vader have?",
+          "answers": [
+            "Red",
+            "Yellow",
+            "Blue",
+            "Brown"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "category":"people",
+          "question": "What color eyes does Owen Lars have?",
+          "answers": [
+            "Red",
+            "Yellow",
+            "Blue",
+            "Brown"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "category":"people",
+          "question": "How tall is Yoda?",
+          "answers": [
+            "100cm",
+            "15cm",
+            "83cm",
+            "66cm"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "category":"people",
+          "question": "How tall is Lando Calrissian?",
+          "answers": [
+            "177cm",
+            "157cm",
+            "183cm",
+            "166cm"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "category":"people",
+          "question": "How tall is Boba Fett?",
+          "answers": [
+            "177cm",
+            "157cm",
+            "183cm",
+            "166cm"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "category":"people",
+          "question": "How tall is Luke Skywalker?",
+          "answers": [
+            "167cm",
+            "172cm",
+            "183cm",
+            "166cm"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "category":"people",
+          "question": "How tall is C-3PO?",
+          "answers": [
+            "167cm",
+            "172cm",
+            "183cm",
+            "166cm"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "category":"planets",
+          "question": "What planet is home to Chewbacca and the Wookiees?",
+          "answers": [
+            "Alderaan",
+            "Geonosis",
+            "Kashyyyk",
+            "Bestine IV"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "category":"planets",
+          "question": "What type of terrain Yavin IV have?",
+          "answers": [
+            "Mountain",
+            "Desert",
+            "Savanna",
+            "Jungle"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "category":"planets",
+          "question": "Where does Yoda live?",
+          "answers": [
+            "Dagobah",
+            "Tatooine",
+            "Coruscant",
+            "Kamino"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "category":"planets",
+          "question": "Known residents of Kamino planet are...",
+          "answers": [
+            "Taun We",
+            "Lama Su",
+            "Boba Fett",
+            "Everyone mentioned abowe"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "category":"planets",
+          "question": "What was the name of the planet that the clones where made on?",
+          "answers": [
+            "Tatooine",
+            "Geonosis",
+            "Kamino",
+            "Bestine IV"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "category":"planets",
+          "question": "What is Alderaan orbital period?",
+          "answers": [
+            "546 days",
+            "73 days",
+            "364 days",
+            "326 days"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "category":"planets",
+          "question": "What is Alderaan orbital period?",
+          "answers": [
+            "546 days",
+            "73 days",
+            "364 days",
+            "326 days"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "category":"planets",
+          "question": "What is Corellia orbital period?",
+          "answers": [
+            "546 days",
+            "329 days",
+            "364 days",
+            "326 days"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "category":"planets",
+          "question": "What is Nal Hutta orbital period?",
+          "answers": [
+            "546 days",
+            "413 days",
+            "364 days",
+            "Nal Hutta is not a planet"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "category":"planets",
+          "question": "What is Rodia orbital period?",
+          "answers": [
+            "175 days",
+            "73 days",
+            "169 days",
+            "305 days"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "category":"planets",
+          "question": "What is Naboo orbital period?",
+          "answers": [
+            "312 days",
+            "313 days",
+            "364 days",
+            "326 days"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "category":"planets",
+          "question": "What is Naboo rotation period?",
+          "answers": [
+            "24 hours",
+            "24 and half hour",
+            "26 hours",
+            "30 hours"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "category":"planets",
+          "question": "What is Coruscant rotation period?",
+          "answers": [
+            "24 hours",
+            "24 and half hour",
+            "26 hours",
+            "30 hours"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "category":"planets",
+          "question": "What is Felucia rotation period?",
+          "answers": [
+            "34 hours",
+            "34 and half hour",
+            "36 hours",
+            "20 hours"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "category":"planets",
+          "question": "What is Mustafar rotation period?",
+          "answers": [
+            "34 hours",
+            "34 and half hour",
+            "36 hours",
+            "40 hours"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "category":"films",
+          "question": "Correct release date of Attack of the Clones film is...?",
+          "answers": [
+            "2002-05-16",
+            "1998-11-24",
+            "1999-05-19",
+            "2005-05-19"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "category":"films",
+          "question": "Which of these species� names is NEVER mentioned in the films?",
+          "answers": [
+            "Ewoks",
+            "Wookies",
+            "Jawas",
+            "People"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "category":"films",
+          "question": "Which country was the home base for principal photography on Revenge of the Sith?",
+          "answers": [
+            "Canada",
+            "Australia",
+            "Poland",
+            "Japan"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "category":"films",
+          "question": "What's the name of 4th Star Wars movie?",
+          "answers": [
+            "The Empire Strikes Back",
+            "Return of the Jedi",
+            "The Phantom Menace",
+            "A New Hope"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "category":"films",
+          "question": "What's the name of 7th Star Wars movie?",
+          "answers": [
+            "The Empire Strikes Back",
+            "Return of the Jedi",
+            "The Phantom Menace",
+            "A New Hope"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "category":"films",
+          "question": "What's the name of 5th Star Wars movie?",
+          "answers": [
+            "The Empire Strikes Back",
+            "Return of the Jedi",
+            "The Phantom Menace",
+            "None of the above"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "category":"films",
+          "question": "Which planet wasn't showed in The Phantom Menace?",
+          "answers": [
+            "Naboo",
+            "Corusant",
+            "Dagobah",
+            "Tatooine"
+          ],
+          "correctIndex": 2
+        }
+      ,
+        {
+          "category":"species",
+          "question": "What is the species of the diminutive workers who helped freeze Han Solo?",
+          "answers": [
+            "Xexto",
+            "Kashyyyk",
+            "Ugnaughts",
+            "Zabrak"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "category":"species",
+          "question": "What do Han and Luke ride in the Snow on Hoth?",
+          "answers": [
+            "Trandoshan",
+            "Tauntaum",
+            "Gungan",
+            "Muun"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "category":"species",
+          "question": "Which species is not classificated as mammal.",
+          "answers": [
+            "Skakoan",
+            "Kaminoan",
+            "Mirialan",
+            "Quermian"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "category":"species",
+          "question": "What is average life span of Kel Dor species?",
+          "answers": [
+            "70",
+            "200",
+            "250",
+            "They are immortal"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "category":"species",
+          "question": "What skin color does Ewok species have?",
+          "answers": [
+            "Red",
+            "Yellow",
+            "Blue",
+            "Brown"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "category":"species",
+          "question": "What skin color does Gungan species have?",
+          "answers": [
+            "Red, Brown",
+            "Yellow, Green",
+            "Blue, White",
+            "Brown, Green"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "category":"species",
+          "question": "What skin color does Cerean species have?",
+          "answers": [
+            "Blood red",
+            "Pale pink",
+            "Dark blue",
+            "Dark brown"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "category":"species",
+          "question": "Which species is Not categorised as mammal?",
+          "answers": [
+            "Twi'lek",
+            "Zabrak",
+            "Gungan",
+            "Human"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "category":"species",
+          "question": "Which species is categorised as reptalian?",
+          "answers": [
+            "Twi'lek",
+            "Zabrak",
+            "Aleena",
+            "Human"
+          ],
+          "correctIndex": 2
+        }
+      ,
+
+        {
+          "category":"starships",
+          "question": "What is the name of Han Solo ship?",
+          "answers": [
+            "Death Star",
+            "Millennium Falcon",
+            "X-Wing",
+            "Executor"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "category":"starships",
+          "question": "Which starship was used to upgrade Han Solo's beloved ship?",
+          "answers": [
+            "Millennium Falcon",
+            "AA-9 Coruscant freighter",
+            "Naboo Royal Starship",
+            "YT-1300 stock light freighter"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "category":"starships",
+          "question": "How many engines are on an X-wing fighter?",
+          "answers": [
+            "2",
+            "3",
+            "4",
+            "0"
+          ],
+          "correctIndex": 2
+        },
+
+
+        {
+          "category":"starships",
+          "question": "What is maxiumum cargo capacity of B-wing starship?",
+          "answers": [
+            "124",
+            "45",
+            "11",
+            "17"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "category":"starships",
+          "question": "What type of class is Naboo Royal Starship?",
+          "answers": [
+            "Yacht",
+            "Space Transport",
+            "Starfighter",
+            "Patrol craft"
+          ],
+          "correctIndex": 0
+        }
+      ,
+
+
+        {
+          "category":"vehicles",
+          "question": "What is maximum speed of TIE bomber?",
+          "answers": [
+            "610",
+            "20",
+            "561",
+            "850"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "category":"vehicles",
+          "question": "What is maximum speed of AT-ST?",
+          "answers": [
+            "61",
+            "20",
+            "80",
+            "90"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "category":"vehicles",
+          "question": "What is maximum speed of Sith speeder?",
+          "answers": [
+            "161",
+            "120",
+            "180",
+            "190"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "category":"vehicles",
+          "question": "What is cost in credits of Sith speeder?",
+          "answers": [
+            "1000",
+            "2000",
+            "4000",
+            "8000"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "category":"vehicles",
+          "question": "What is cost in credits of Imperial Speeder Bike?",
+          "answers": [
+            "1000",
+            "2000",
+            "4000",
+            "8000"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "category":"vehicles",
+          "question": "What is cost in credits of Zephyr-G swoop bike?",
+          "answers": [
+            "5750",
+            "1880",
+            "4130",
+            "5850"
+          ],
+          "correctIndex": 0
+        }
+  ]
+
