@@ -4,15 +4,26 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.constraint.ConstraintLayout;
+import android.support.v4.app.FragmentActivity;
 import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 import project.pb.star_wars_project.R;
 import project.pb.star_wars_project.base.BaseFragment;
+import project.pb.star_wars_project.functional.navigation.NavManager;
+import project.pb.star_wars_project.functional.rest.Rest;
+import project.pb.star_wars_project.functional.rest.RestSingleton;
 import project.pb.star_wars_project.models.interfaces.models.*;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class DetailFragment extends BaseFragment {
 
@@ -23,13 +34,20 @@ public class DetailFragment extends BaseFragment {
     public ConstraintLayout vehicleLayout;
     public ConstraintLayout specieLayout;
 
-    private TextView title,episode_id,director,producer,release_date;
-    private TextView name,height,mass,hair_color,skin_color,eye_color,birth_year,gender,homeworld;
-    private TextView rotation_period,orbital_period,diameter,climate,gravity,terrain,surface_water,population;
-    private TextView classification,designation,language,avarage_life_span;
-    private TextView model,cost,length,max_speed,crew ,passengers,cargo,consumables,manufacturer,v_class;
-    private TextView hyper,mglt;
-    private Button back;
+    private Button peopleAdapt;
+    private Button vehiclesAdapt;
+    private Button starshipsAdapt;
+    private Button speciesAdapt;
+    private Button filmsAdapt;
+    private Button planetsAdapt;
+
+
+    private TextView title, episode_id, director, producer, release_date;
+    private TextView name, height, mass, hair_color, skin_color, eye_color, birth_year, gender, homeworld;
+    private TextView rotation_period, orbital_period, diameter, climate, gravity, terrain, surface_water, population;
+    private TextView classification, designation, language, avarage_life_span;
+    private TextView model, cost, length, max_speed, crew, passengers, cargo, consumables, manufacturer, v_class;
+    private TextView hyper, mglt;
 
     private Films films;
     private People people;
@@ -77,15 +95,10 @@ public class DetailFragment extends BaseFragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        filmLayout = getView().findViewById(R.id.Films);
-        peopleLayout = getView().findViewById(R.id.People);
-        planetLayout = getView().findViewById(R.id.Planets);
-        starshipLayout = getView().findViewById(R.id.Starships);
-        vehicleLayout = getView().findViewById(R.id.Vehicles);
-        specieLayout = getView().findViewById(R.id.Species);
+        findViews();
 
 
-        switch (select){
+        switch (select) {
             case 1:
                 viewPeople();
                 break;
@@ -115,7 +128,25 @@ public class DetailFragment extends BaseFragment {
 
     }
 
-    private void viewFilm(){
+    private void findViews() {
+
+        filmLayout = getView().findViewById(R.id.Films);
+        peopleLayout = getView().findViewById(R.id.People);
+        planetLayout = getView().findViewById(R.id.Planets);
+        starshipLayout = getView().findViewById(R.id.Starships);
+        vehicleLayout = getView().findViewById(R.id.Vehicles);
+        specieLayout = getView().findViewById(R.id.Species);
+
+        peopleAdapt = getView().findViewById(R.id.btn_people_adapt);
+        filmsAdapt = getView().findViewById(R.id.btn_films_adapt);
+        starshipsAdapt = getView().findViewById(R.id.btn_starships_adapt);
+        vehiclesAdapt = getView().findViewById(R.id.btn_vehicles_adapt);
+        speciesAdapt = getView().findViewById(R.id.btn_species_adapt);
+        planetsAdapt = getView().findViewById(R.id.btn_planet_adapt);
+
+    }
+
+    private void viewFilm() {
         goneAll();
         filmLayout.setVisibility(View.VISIBLE);
         title = filmLayout.findViewById(R.id.f_title);
@@ -129,8 +160,33 @@ public class DetailFragment extends BaseFragment {
         release_date.setText(films.getRelease_date());
         title.setText(films.getTitle());
 
+        if (!films.characters.isEmpty()) {
+            peopleAdapt.setVisibility(View.VISIBLE);
+            peopleAdapt.setOnClickListener(v -> fetchPeople(films.characters));
+        }
+        if (!films.vehicles.isEmpty()) {
+            vehiclesAdapt.setVisibility(View.VISIBLE);
+            vehiclesAdapt.setOnClickListener(v -> fetchVehicules(films.vehicles));
+        }
+        if (!films.starships.isEmpty()) {
+            starshipsAdapt.setVisibility(View.VISIBLE);
+            starshipsAdapt.setOnClickListener(v -> fetchStarships(films.starships));
+
+        }
+        if (!films.species.isEmpty()) {
+            speciesAdapt.setVisibility(View.VISIBLE);
+            speciesAdapt.setOnClickListener(v -> fetchSpecies(films.species));
+        }
+        if (!films.planets.isEmpty()) {
+            planetsAdapt.setVisibility(View.VISIBLE);
+            planetsAdapt.setOnClickListener(v -> fetchPlanets(films.planets));
+        }
+
+        filmsAdapt.setVisibility(View.GONE);
+
     }
-    private void viewPeople(){
+
+    private void viewPeople() {
         goneAll();
         peopleLayout.setVisibility(View.VISIBLE);
 
@@ -154,8 +210,28 @@ public class DetailFragment extends BaseFragment {
         gender.setText(people.getGender());
         eye_color.setText(people.getEye_color());
 
+        if (!people.films.isEmpty()) {
+            filmsAdapt.setVisibility(View.VISIBLE);
+            filmsAdapt.setOnClickListener(v -> fetchFilms(people.films));
+        }
+        if (!people.vehicles.isEmpty()) {
+            vehiclesAdapt.setVisibility(View.VISIBLE);
+            vehiclesAdapt.setOnClickListener(v -> fetchVehicules(people.vehicles));
+        }
+        if (!people.starships.isEmpty()) {
+            starshipsAdapt.setVisibility(View.VISIBLE);
+            starshipsAdapt.setOnClickListener(v -> fetchStarships(people.starships));
+        }
+        if (!people.species.isEmpty()) {
+            speciesAdapt.setVisibility(View.VISIBLE);
+            speciesAdapt.setOnClickListener(v -> fetchSpecies(people.species));
+        }
+        planetsAdapt.setVisibility(View.GONE);
+        peopleAdapt.setVisibility(View.GONE);
+
     }
-    private void viewPlanet(){
+
+    private void viewPlanet() {
         goneAll();
         planetLayout.setVisibility(View.VISIBLE);
         name = planetLayout.findViewById(R.id.pl_name_pl);
@@ -178,8 +254,28 @@ public class DetailFragment extends BaseFragment {
         surface_water.setText(planet.getSurface_water());
         population.setText(planet.getPopulation());
 
+        peopleAdapt.setVisibility(View.VISIBLE);
+        filmsAdapt.setVisibility(View.VISIBLE);
+        vehiclesAdapt.setVisibility(View.VISIBLE);
+        starshipsAdapt.setVisibility(View.VISIBLE);
+        speciesAdapt.setVisibility(View.GONE);
+
+        if (!planet.residents.isEmpty()) {
+            peopleAdapt.setVisibility(View.VISIBLE);
+            peopleAdapt.setOnClickListener(v -> fetchPeople(planet.residents));
+        }
+        if (!planet.films.isEmpty()) {
+            filmsAdapt.setVisibility(View.VISIBLE);
+            filmsAdapt.setOnClickListener(v -> fetchFilms(planet.films));
+        }
+        vehiclesAdapt.setVisibility(View.GONE);
+        starshipsAdapt.setVisibility(View.GONE);
+        speciesAdapt.setVisibility(View.GONE);
+        planetsAdapt.setVisibility(View.GONE);
+
     }
-    private void viewSpecie(){
+
+    private void viewSpecie() {
         goneAll();
         specieLayout.setVisibility(View.VISIBLE);
         name = specieLayout.findViewById(R.id.sp_name);
@@ -203,8 +299,22 @@ public class DetailFragment extends BaseFragment {
         language.setText(specie.getLanguage());
         eye_color.setText(specie.getEye_colors());
         avarage_life_span.setText(specie.getAverage_lifespan());
+
+        if (!specie.people.isEmpty()) {
+            peopleAdapt.setVisibility(View.VISIBLE);
+            peopleAdapt.setOnClickListener(v -> fetchPeople(specie.people));
+        }
+        if (!specie.films.isEmpty()) {
+            filmsAdapt.setVisibility(View.VISIBLE);
+            filmsAdapt.setOnClickListener(v -> fetchFilms(specie.films));
+        }
+        vehiclesAdapt.setVisibility(View.GONE);
+        starshipsAdapt.setVisibility(View.GONE);
+        speciesAdapt.setVisibility(View.GONE);
+        planetsAdapt.setVisibility(View.GONE);
     }
-    private void viewVehicle(){
+
+    private void viewVehicle() {
         goneAll();
         vehicleLayout.setVisibility(View.VISIBLE);
 
@@ -231,9 +341,22 @@ public class DetailFragment extends BaseFragment {
         consumables.setText(vehicle.getConsumables());
         manufacturer.setText(vehicle.getManufacturer());
         v_class.setText(vehicle.getVehicle_class());
+
+        if (!vehicle.pilots.isEmpty()) {
+            peopleAdapt.setVisibility(View.VISIBLE);
+            peopleAdapt.setOnClickListener(v -> fetchPeople(vehicle.pilots));
+        }
+        if (!vehicle.films.isEmpty()) {
+            filmsAdapt.setVisibility(View.VISIBLE);
+            filmsAdapt.setOnClickListener(v -> fetchFilms(vehicle.films));
+        }
+        vehiclesAdapt.setVisibility(View.GONE);
+        starshipsAdapt.setVisibility(View.GONE);
+        speciesAdapt.setVisibility(View.GONE);
+        planetsAdapt.setVisibility(View.GONE);
     }
 
-    private void viewStarship(){
+    private void viewStarship() {
         goneAll();
         starshipLayout.setVisibility(View.VISIBLE);
         name = starshipLayout.findViewById(R.id.st_name);
@@ -264,14 +387,202 @@ public class DetailFragment extends BaseFragment {
         hyper.setText(starship.getHyperdrive_rating());
         mglt.setText(starship.getMGLT());
 
+        if (!starship.pilots.isEmpty()) {
+            peopleAdapt.setVisibility(View.VISIBLE);
+            peopleAdapt.setOnClickListener(v -> fetchPeople(starship.pilots));
+        }
+        if (!starship.films.isEmpty()) {
+            filmsAdapt.setVisibility(View.VISIBLE);
+            filmsAdapt.setOnClickListener(v -> fetchFilms(starship.films));
+        }
+        vehiclesAdapt.setVisibility(View.GONE);
+        starshipsAdapt.setVisibility(View.GONE);
+        speciesAdapt.setVisibility(View.GONE);
+        planetsAdapt.setVisibility(View.GONE);
+
     }
 
-    private void goneAll(){
+    private void goneAll() {
         peopleLayout.setVisibility(View.GONE);
         planetLayout.setVisibility(View.GONE);
         specieLayout.setVisibility(View.GONE);
         starshipLayout.setVisibility(View.GONE);
         vehicleLayout.setVisibility(View.GONE);
         filmLayout.setVisibility(View.GONE);
+    }
+
+    private void fetchFilms(List<String> urls) {
+        ArrayList newData = new ArrayList<Films>();
+        for (int i = 0; i < urls.size(); i++) {
+            int finalI = i;
+            RestSingleton.getInstance().getApi().getSingleFilm(urls.get(i)).enqueue(new Callback<Films>() {
+
+                @Override
+                public void onResponse(Call<Films> call, Response<Films> response) {
+                    newData.add(response.body());
+                    if (finalI == urls.size() - 1) {
+                        navigateNextFilms(newData);
+                    }
+                }
+
+                @Override
+                public void onFailure(Call<Films> call, Throwable t) {
+                    Toast.makeText(requireContext(), "Error Occured", Toast.LENGTH_SHORT).show();
+                }
+            });
+        }
+
+    }
+
+    private void navigateNextFilms(ArrayList<Films> list) {
+        ResultFragment resultFragment = new ResultFragment();
+        resultFragment.setFilmsList(list);
+        resultFragment.setSelect(3);
+        getActions().getNavManager().navigate(resultFragment, true);
+    }
+
+    private void fetchPeople(List<String> urls) {
+        ArrayList newData = new ArrayList<People>();
+        for (int i = 0; i < urls.size(); i++) {
+            int finalI = i;
+            RestSingleton.getInstance().getApi().getSinglePerson(urls.get(i)).enqueue(new Callback<People>() {
+
+                @Override
+                public void onResponse(Call<People> call, Response<People> response) {
+                    newData.add(response.body());
+                    if (finalI == urls.size() - 1) {
+                        navigateNextPeople(newData);
+                    }
+                }
+
+                @Override
+                public void onFailure(Call<People> call, Throwable t) {
+                    Toast.makeText(requireContext(), "Error Occured", Toast.LENGTH_SHORT).show();
+                }
+            });
+        }
+    }
+
+    private void navigateNextPeople(ArrayList<People> list) {
+        ResultFragment resultFragment = new ResultFragment();
+        resultFragment.setPeopleList(list);
+        resultFragment.setSelect(1);
+        getActions().getNavManager().navigate(resultFragment, true);
+    }
+
+    private void fetchStarships(List<String> urls) {
+        ArrayList newData = new ArrayList<Starships>();
+        for (int i = 0; i < urls.size(); i++) {
+            int finalI = i;
+            RestSingleton.getInstance().getApi().getSingleStarship(urls.get(i)).enqueue(new Callback<Starships>() {
+
+                @Override
+                public void onResponse(Call<Starships> call, Response<Starships> response) {
+                    newData.add(response.body());
+                    if (finalI == urls.size() - 1) {
+                        navigateNextStarships(newData);
+                    }
+                }
+
+                @Override
+                public void onFailure(Call<Starships> call, Throwable t) {
+                    Toast.makeText(requireContext(), "Error Occured", Toast.LENGTH_SHORT).show();
+                }
+            });
+        }
+    }
+
+    private void navigateNextStarships(ArrayList<Starships> list) {
+        ResultFragment resultFragment = new ResultFragment();
+        resultFragment.setStarshipsList(list);
+        resultFragment.setSelect(4);
+        getActions().getNavManager().navigate(resultFragment, true);
+    }
+
+    private void fetchVehicules(List<String> urls) {
+        ArrayList newData = new ArrayList<Vehicles>();
+        for (int i = 0; i < urls.size(); i++) {
+            int finalI = i;
+            RestSingleton.getInstance().getApi().getSingleVehicle(urls.get(i)).enqueue(new Callback<Vehicles>() {
+
+                @Override
+                public void onResponse(Call<Vehicles> call, Response<Vehicles> response) {
+                    newData.add(response.body());
+                    if (finalI == urls.size() - 1) {
+                        navigateNextVehicles(newData);
+                    }
+                }
+
+                @Override
+                public void onFailure(Call<Vehicles> call, Throwable t) {
+                    Toast.makeText(requireContext(), "Error Occured", Toast.LENGTH_SHORT).show();
+                }
+            });
+        }
+    }
+
+    private void navigateNextVehicles(ArrayList<Vehicles> list) {
+        ResultFragment resultFragment = new ResultFragment();
+        resultFragment.setVehiclesList(list);
+        resultFragment.setSelect(5);
+        getActions().getNavManager().navigate(resultFragment, true);
+    }
+
+    private void fetchPlanets(List<String> urls) {
+        ArrayList newData = new ArrayList<Planets>();
+        for (int i = 0; i < urls.size(); i++) {
+            int finalI = i;
+            RestSingleton.getInstance().getApi().getSinglePlanet(urls.get(i)).enqueue(new Callback<Planets>() {
+
+                @Override
+                public void onResponse(Call<Planets> call, Response<Planets> response) {
+                    newData.add(response.body());
+                    if (finalI == urls.size() - 1) {
+                        navigateNextPlanets(newData);
+                    }
+                }
+
+                @Override
+                public void onFailure(Call<Planets> call, Throwable t) {
+                    Toast.makeText(requireContext(), "Error Occured", Toast.LENGTH_SHORT).show();
+                }
+            });
+        }
+    }
+
+    private void navigateNextPlanets(ArrayList<Planets> list) {
+        ResultFragment resultFragment = new ResultFragment();
+        resultFragment.setPlanetList(list);
+        resultFragment.setSelect(2);
+        getActions().getNavManager().navigate(resultFragment, true);
+    }
+
+    private void fetchSpecies(List<String> urls) {
+        ArrayList newData = new ArrayList<Species>();
+        for (int i = 0; i < urls.size(); i++) {
+            int finalI = i;
+            RestSingleton.getInstance().getApi().getSingleSpecie(urls.get(i)).enqueue(new Callback<Species>() {
+
+                @Override
+                public void onResponse(Call<Species> call, Response<Species> response) {
+                    newData.add(response.body());
+                    if (finalI == urls.size() - 1) {
+                        navigateNextSpecies(newData);
+                    }
+                }
+
+                @Override
+                public void onFailure(Call<Species> call, Throwable t) {
+                    Toast.makeText(requireContext(), "Error Occured", Toast.LENGTH_SHORT).show();
+                }
+            });
+        }
+    }
+
+    private void navigateNextSpecies(ArrayList<Species> list) {
+        ResultFragment resultFragment = new ResultFragment();
+        resultFragment.setSpeciesList(list);
+        resultFragment.setSelect(6);
+        getActions().getNavManager().navigate(resultFragment, true);
     }
 }

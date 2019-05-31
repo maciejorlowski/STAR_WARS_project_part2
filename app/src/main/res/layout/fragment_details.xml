@@ -16,6 +16,69 @@
             app:layout_constraintBottom_toBottomOf="parent"
             android:visibility="visible"
             android:text="@string/back_button"/>
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_people_adapt"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toTopOf="@id/button"
+            android:visibility="gone"
+            android:text="@string/people_button"/>
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_starships_adapt"
+            app:layout_constraintStart_toEndOf="@id/btn_people_adapt"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="48dp"
+            app:layout_constraintBottom_toBottomOf="@id/button"
+            android:visibility="gone"
+            android:text="@string/starships_button"/>
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_films_adapt"
+            app:layout_constraintStart_toEndOf="@id/btn_starships_adapt"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="48dp"
+            app:layout_constraintBottom_toBottomOf="@id/button"
+            android:visibility="gone"
+            android:text="@string/films_button"/>
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_vehicles_adapt"
+            app:layout_constraintStart_toEndOf="@id/btn_species_adapt"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toTopOf="@id/btn_people_adapt"
+            android:visibility="gone"
+            android:text="@string/vehicles_button"/>
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_species_adapt"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toTopOf="@id/btn_people_adapt"
+            android:visibility="gone"
+            android:text="@string/species_button"/>
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_planet_adapt"
+            app:layout_constraintStart_toEndOf="@id/btn_vehicles_adapt"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toTopOf="@id/btn_people_adapt"
+            android:visibility="gone"
+            android:text="@string/planets_button"/>
+
     <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent" android:id="@+id/Films" android:visibility="visible"
@@ -664,13 +727,13 @@
                     android:layout_below="@id/consumables_label_st"
                     android:layout_marginTop="8dp"/>
             <TextView
-                android:text="Hyper drive rating "
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/hyper_label_st"
-                android:layout_marginStart="2dp"
-                android:layout_below="@id/manufacturer_label_st"
-                android:layout_marginTop="8dp"/>
+                    android:text="Hyper drive rating "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/hyper_label_st"
+                    android:layout_marginStart="2dp"
+                    android:layout_below="@id/manufacturer_label_st"
+                    android:layout_marginTop="8dp"/>
             <TextView
                     android:text="MGLT "
                     android:layout_width="wrap_content"
@@ -1053,7 +1116,5 @@
 
 
         </RelativeLayout>
-
-
     </android.support.constraint.ConstraintLayout>
 </android.support.constraint.ConstraintLayout>

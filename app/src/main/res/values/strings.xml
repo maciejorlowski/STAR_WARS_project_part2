@@ -29,6 +29,14 @@
     <string name="classification">Classification</string>
     <string name="model">Model</string>
     <string name="back_button">BACK</string>
+
+    <string name="people_button">PEOPLE</string>
+    <string name="films_button">FILMS</string>
+    <string name="species_button">SPECIES</string>
+    <string name="vehicles_button">VEHICLES</string>
+    <string name="starships_button">STARSHIPS</string>
+    <string name="planets_button">PLANETS</string>
+
     <string name="cancel_btn">Cancel</string>
     <string name="toast_noConnection">Brak polaczenia z internetem</string>
 </resources>
