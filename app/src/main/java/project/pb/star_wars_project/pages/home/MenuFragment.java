@@ -51,7 +51,7 @@ public class MenuFragment extends BaseFragment {
         youtubeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getActions().getNavManager().navigate(YouTubeFragment.getyInstance(), true);
+                getActions().getNavManager().navigate(YouTubeFragment.getYouTubeInstance(), true);
 
             }
         });

@@ -15,9 +15,7 @@ public class ImageAdapter extends BaseAdapter {
         this.context = context;
     }
     public Integer images[] = {
-            R.drawable.pic1,R.drawable.image2,
-            R.drawable.image5,R.drawable.image4,
-            R.drawable.image5,R.drawable.image6,
+            R.drawable.pic1,
             R.drawable.pic2,R.drawable.pic3,
             R.drawable.pic4,R.drawable.pic5,
             R.drawable.pic6,R.drawable.pic7,

@@ -48,7 +48,7 @@ public class YouTubeGalleryFragment extends BaseFragment {
         galleryButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getActions().getNavManager().navigate(GalleryFragment.getGalleryInstance(),true);
+//                getActions().getNavManager().navigate(GalleryFragment.getGalleryInstance(),true);
             }
         });
     }

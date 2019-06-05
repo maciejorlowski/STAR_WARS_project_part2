@@ -6,14 +6,12 @@
         android:background="@drawable/background">
 
     <Button android:id="@+id/youTubeButton"
-            android:text="@string/youTubeButton"
             android:layout_above="@+id/galleryButton"
             android:color="@color/basic_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
     <Button android:id="@+id/galleryButton"
-            android:text="@string/Gallery"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
             android:color="@color/basic_text"
