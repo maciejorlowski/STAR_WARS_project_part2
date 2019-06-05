@@ -1,144 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical" >
 
     <android.support.v7.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-        <RelativeLayout
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="0dp"
+            app:cardMaxElevation="1dp"
+            app:cardElevation="0.7dp"
+            app:contentPadding="10dp"
+            app:contentPaddingBottom="0dp"
+            app:cardPreventCornerOverlap="true"
+            app:cardUseCompatPadding="true">
+        <GridLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:padding="8dp">
-            <TextView
-                    android:text="TextView"
-                    android:layout_width="130dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:layout_toRightOf="@id/tile_label"
-                    android:layout_marginLeft="8dp"
-                    android:id="@+id/f_title"/>
-            <TextView
-                    android:text="TextView"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/f_title"
-                    android:layout_marginTop="8dp"
-                    android:layout_toRightOf="@id/id_label"
-                    android:id="@+id/f_episode_id"/>
-            <TextView
-                    android:text="TextView"
-                    android:layout_width="285dp"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/f_episode_id"
-                    android:layout_marginTop="8dp"
-                    android:layout_toRightOf="@id/director_label"
-                    android:id="@+id/f_director"/>
-            <TextView
-                    android:text="TextView"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/f_director"
-                    android:id="@+id/f_producer"
-                    android:layout_toRightOf="@id/producer_label"
-                    android:layout_marginTop="8dp"/>
-            <TextView
-                    android:text="TextView"
-                    android:layout_width="75dp"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/f_producer"
-                    android:layout_marginTop="8dp"
-                    android:layout_toRightOf="@id/release_date_label"
-                    android:id="@+id/f_release_date"/>
-            <Button
-                    android:text="Vehicles"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_toRightOf="@id/f_episode_id"
-                    android:id="@+id/r_vehicles"
-                    android:layout_marginLeft="8dp"
-                    android:layout_toEndOf="@+id/f_episode_id"
-                    android:layout_marginTop="8dp"
-                    android:layout_alignParentTop="true"/>
-            <Button
-                    android:text="Starships"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_toRightOf="@id/f_producer"
-                    android:layout_below="@+id/r_vehicles"
-                    android:id="@+id/r_starships"
-                    android:layout_marginLeft="8dp"
-                    android:layout_toEndOf="@+id/f_release_date"
-                    android:layout_marginTop="8dp"/>
-            <Button
-                    android:text="Films"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_toRightOf="@id/r_vehicles"
-                    android:id="@+id/r_films"
-                    android:layout_toEndOf="@+id/r_vehicles"
-                    android:layout_marginTop="8dp"
-                    android:layout_alignParentTop="true"/>
-            <Button
-                    android:text="Species"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_toRightOf="@id/r_starships"
-                    android:layout_below="@+id/r_films"
-                    android:id="@+id/r_species"
-                    android:layout_toEndOf="@+id/r_starships"
-                    android:layout_marginTop="8dp"/>
-            <TextView
-                    android:text="Title "
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_marginStart="2dp"
-                    android:layout_alignParentTop="true"
-                    android:id="@+id/tile_label"
-                    android:layout_marginTop="8dp"/>
+                android:background="@android:color/black"
+                android:columnCount="3"
+            >
 
-            <TextView
-                    android:text="Episode id "
+            <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/id_label"
-                    android:layout_marginStart="2dp"
-                    android:layout_below="@id/tile_label"
-                    android:layout_marginTop="8dp"/>
+                    android:orientation="vertical"
+                    android:layout_columnWeight="1"
+                    android:layout_column="0">
+                <TextView
+                        android:text="Title "
+                        android:layout_margin="3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tile_label"/>
 
-            <TextView
-                    android:text="Director "
+                <TextView
+                        android:text="Episode id "
+                        android:layout_margin="3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/id_label"/>
+
+                <TextView
+                        android:text="Director "
+                        android:layout_margin="3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/director_label"/>
+                <TextView
+                        android:text="Producer "
+                        android:layout_margin="3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/producer_label"/>
+                <TextView
+                        android:text="Relase date "
+                        android:layout_margin="3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/release_date_label"/>
+            </LinearLayout>
+
+            <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/director_label"
-                    android:layout_marginStart="2dp"
-                    android:layout_below="@id/id_label"
-                    android:layout_marginTop="8dp"/>
-            <TextView
-                    android:text="Producer "
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/producer_label"
-                    android:layout_marginStart="2dp"
-                    android:layout_below="@id/director_label"
-                    android:layout_marginTop="8dp"/>
-            <TextView
-                    android:text="Relase date "
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/release_date_label"
-                    android:layout_marginStart="2dp"
-                    android:layout_below="@id/producer_label"
-                    android:layout_marginTop="8dp"/>
+                    android:orientation="vertical"
+                    android:layout_columnWeight="1"
+                    android:layout_column="1">
+                <TextView
+                        android:text="TextView"
+                        android:layout_margin="3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/f_title"/>
+                <TextView
+                        android:text="TextView"
+                        android:layout_margin="3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/f_episode_id"/>
+                <TextView
+                        android:text="TextView"
+                        android:layout_margin="3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/f_director"/>
+                <TextView
+                        android:text="TextView"
+                        android:layout_margin="3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/f_producer"/>
+                <TextView
+                        android:text="TextView"
+                        android:layout_margin="3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/f_release_date"/>
+            </LinearLayout>
 
 
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_columnWeight="1"
+                    android:layout_column="2">
+                <Button
+                        android:text="Vehicles"
+                        android:layout_margin="3dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/r_vehicles"/>
+                <Button
+                        android:text="Starships"
+                        android:layout_margin="3dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/r_starships"/>
+                <Button
+                        android:text="Films"
+                        android:layout_margin="3dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/r_films"/>
+                <Button
+                        android:text="Species"
+                        android:layout_margin="3dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/r_species"/>
+            </LinearLayout>
 
-        </RelativeLayout>
+        </GridLayout>
+
 
     </android.support.v7.widget.CardView>
 

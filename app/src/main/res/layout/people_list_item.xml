@@ -1,207 +1,194 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
 
     <android.support.v7.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-        <RelativeLayout
+            android:layout_height="match_parent"
+            app:cardCornerRadius="0dp"
+            app:cardMaxElevation="1dp"
+            app:cardElevation="0.7dp"
+            app:contentPadding="10dp"
+            app:contentPaddingBottom="0dp"
+            app:cardPreventCornerOverlap="true"
+            app:cardUseCompatPadding="true">
+        <GridLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:padding="8dp">
-            <TextView
-                    android:text="TextView"
-                    android:layout_width="130dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:layout_toRightOf="@id/name_label"
-                    android:layout_marginLeft="8dp"
-                    android:id="@+id/r_name"/>
-            <TextView
-                    android:text="TextView"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/r_name"
-                    android:layout_marginTop="8dp"
-                    android:layout_toRightOf="@id/height_label"
-                    android:id="@+id/r_height"/>
-            <TextView
-                    android:text="TextView"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/r_height"
-                    android:layout_marginTop="8dp"
-                    android:layout_toRightOf="@id/mass_label"
-                    android:id="@+id/r_mass"/>
-            <TextView
-                    android:text="TextView"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/r_mass"
-                    android:id="@+id/r_hair_color"
-                    android:layout_toRightOf="@id/hair_color_label"
-                    android:layout_marginTop="8dp"/>
-            <TextView
-                    android:text="TextView"
-                    android:layout_width="75dp"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/r_hair_color"
-                    android:layout_marginTop="8dp"
-                    android:layout_toRightOf="@id/skin_color_label"
-                    android:id="@+id/r_skin_color"/>
-            <TextView
-                    android:text="TextView"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/r_skin_color"
-                    android:layout_marginTop="8dp"
-                    android:layout_toRightOf="@id/eye_color_label"
-                    android:id="@+id/r_eye_color"/>
-            <TextView
-                    android:text="TextView"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/r_eye_color"
-                    android:layout_marginTop="8dp"
-                    android:layout_toRightOf="@id/birth_year_label"
-                    android:id="@+id/r_birth_year"/>
-            <TextView
-                    android:text="TextView"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/r_birth_year"
-                    android:layout_marginTop="8dp"
-                    android:layout_toRightOf="@id/gender_label"
-                    android:id="@+id/r_gender"/>
-            <TextView
-                    android:text="TextView"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/r_gender"
-                    android:layout_marginTop="8dp"
-                    android:layout_toRightOf="@id/homeworld_label"
-                    android:id="@+id/r_homeworld"/>
-            <Button
-                    android:text="Vehicles"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_toRightOf="@id/r_height"
-                    android:id="@+id/r_vehicles"
-                    android:layout_marginLeft="8dp"
-                    android:layout_toEndOf="@+id/r_height"
-                    android:layout_marginTop="8dp"
-                    android:layout_alignParentTop="true"/>
-            <Button
-                    android:text="Starships"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_toRightOf="@id/r_hair_color"
-                    android:layout_below="@+id/r_vehicles"
-                    android:id="@+id/r_starships"
-                    android:layout_marginLeft="8dp"
-                    android:layout_toEndOf="@+id/r_skin_color"
-                    android:layout_marginTop="8dp"/>
-            <Button
-                    android:text="Films"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_toRightOf="@id/r_vehicles"
-                    android:id="@+id/r_films"
-                    android:layout_toEndOf="@+id/r_vehicles"
-                    android:layout_marginTop="8dp"
-                    android:layout_alignParentTop="true"/>
-            <Button
-                    android:text="Species"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_toRightOf="@id/r_starships"
-                    android:layout_below="@+id/r_films"
-                    android:id="@+id/r_species"
-                    android:layout_toEndOf="@+id/r_starships"
-                    android:layout_marginTop="8dp"/>
-            <TextView
-                    android:text="Name "
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_marginStart="2dp"
-                    android:layout_alignParentTop="true"
-                    android:id="@+id/name_label"
-                    android:layout_marginTop="8dp"/>
+                android:background="@android:color/black"
+            android:columnCount="3"
+            >
 
-            <TextView
-                android:text="Height "
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/height_label"
-                android:layout_marginStart="2dp"
-                android:layout_below="@id/name_label"
-                android:layout_marginTop="8dp"/>
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_columnWeight="1"
+                    android:layout_column="0">
+                <TextView
+                        android:text="Name "
+                        android:layout_margin="3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/name_label" android:fontFamily="sans-serif"/>
 
-            <TextView
-                    android:text="Mass "
+                <TextView
+                        android:text="Height "
+                        android:layout_margin="3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/height_label"/>
+
+                <TextView
+                        android:text="Mass "
+                        android:layout_margin="3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/mass_label"/>
+                <TextView
+                        android:text="Hair color "
+                        android:layout_margin="3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/hair_color_label"/>
+                <TextView
+                        android:text="Skin color "
+                        android:layout_margin="3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/skin_color_label"/>
+                <TextView
+                        android:text="Eye color "
+                        android:layout_margin="3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/eye_color_label"/>
+                <TextView
+                        android:text="Birth year "
+                        android:layout_margin="3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/birth_year_label"/>
+                <TextView
+                        android:text="Gender "
+                        android:layout_margin="3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/gender_label"
+                />
+                <TextView
+                        android:text="Homeworld "
+                        android:layout_margin="3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/homeworld_label"/>
+            </LinearLayout>
+
+            <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/mass_label"
-                    android:layout_marginStart="2dp"
-                    android:layout_below="@id/height_label"
-                    android:layout_marginTop="8dp"/>
-            <TextView
-                    android:text="Hair color "
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/hair_color_label"
-                    android:layout_marginStart="2dp"
-                    android:layout_below="@id/mass_label"
-                    android:layout_marginTop="8dp"/>
-            <TextView
-                    android:text="Skin color "
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/skin_color_label"
-                    android:layout_marginStart="2dp"
-                    android:layout_below="@id/hair_color_label"
-                    android:layout_marginTop="8dp"/>
-            <TextView
-                    android:text="Eye color "
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/eye_color_label"
-                    android:layout_marginStart="2dp"
-                    android:layout_below="@id/skin_color_label"
-                    android:layout_marginTop="8dp"/>
-            <TextView
-                    android:text="Birth year "
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/birth_year_label"
-                    android:layout_marginStart="2dp"
-                    android:layout_below="@id/eye_color_label"
-                    android:layout_marginTop="8dp"/>
-            <TextView
-                    android:text="Gender "
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/gender_label"
-                    android:layout_marginStart="2dp"
-                    android:layout_below="@id/birth_year_label"
-                    android:layout_marginTop="8dp"/>
-            <TextView
-                    android:text="Homeworld "
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/homeworld_label"
-                    android:layout_marginStart="2dp"
-                    android:layout_below="@id/gender_label"
-                    android:layout_marginTop="8dp"/>
+                    android:orientation="vertical"
+                    android:layout_columnWeight="1"
+                    android:layout_column="1">
+                <TextView
+                        android:text="TextView"
+                        android:layout_margin="3dp"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/r_name"/>
+                <TextView
+                        android:text="TextView"
+                        android:layout_margin="3dp"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/r_height"/>
+                <TextView
+                        android:text="TextView"
+                        android:layout_margin="3dp"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/r_mass"/>
+                <TextView
+                        android:text="TextView"
+                        android:layout_margin="3dp"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/r_hair_color"/>
+                <TextView
+                        android:text="TextView"
+                        android:layout_margin="3dp"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/r_skin_color"/>
+                <TextView
+                        android:text="TextView"
+                        android:layout_margin="3dp"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/r_eye_color"/>
+                <TextView
+                        android:text="TextView"
+                        android:layout_margin="3dp"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/r_birth_year"/>
+                <TextView
+                        android:text="TextView"
+                        android:layout_margin="3dp"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/r_gender"/>
+                <TextView
+                        android:text="TextView"
+                        android:layout_margin="3dp"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/r_homeworld"/>
+            </LinearLayout>
 
 
-        </RelativeLayout>
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_columnWeight="1"
+                    android:layout_column="2">
+                <Button
+                        android:text="Vehicles"
+                        android:layout_margin="3dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:id="@+id/r_vehicles"
+                />
+                <Button
+                        android:text="Starships"
+                        android:layout_margin="3dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:id="@+id/r_starships"/>
+                <Button
+                        android:text="Films"
+                        android:layout_margin="3dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/r_films"
+                />
+                <Button
+                        android:text="Species"
+                        android:layout_margin="3dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/r_species"/>
+            </LinearLayout>
+
+        </GridLayout>
+
 
     </android.support.v7.widget.CardView>
 

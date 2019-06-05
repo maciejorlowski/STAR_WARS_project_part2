@@ -16,8 +16,8 @@ import project.pb.star_wars_project.youtube.YouTubeFragment;
 
 public class MenuFragment extends BaseFragment {
 
-    private ImageButton imageButton1;
-    private ImageButton imageButton2;
+    //private ImageButton imageButton1;
+    //private ImageButton imageButton2;
 
     @Nullable
     @Override
@@ -26,31 +26,31 @@ public class MenuFragment extends BaseFragment {
     }
 
     @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+    public void onViewCreated(@NonNull final View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         getActions().topBar().setTitle("Menu");
 
         ImageButton searchButton = view.findViewById(R.id.imageButton1);
-        ImageButton testButton = view.findViewById(R.id.imageButton2);
+
         searchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getActions().getNavManager().navigate(SearchingFragment.getsInstance(), true);            }
+                getActions().getNavManager().navigate(SearchingFragment.getsInstance(), true);
+            }
         });
         ImageButton gallery = view.findViewById(R.id.imageButton6);
         gallery.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                GalleryFragment galleryFragment = new GalleryFragment();
-                getActions().getNavManager().navigate(galleryFragment,true);
-
+                                       @Override
+                                       public void onClick(View v) {
+                                           GalleryFragment galleryFragment = new GalleryFragment();
+                                           getActions().getNavManager().navigate(galleryFragment, true);
+                                       }
+        });
         ImageButton youtubeButton = view.findViewById(R.id.imageButton2);
         youtubeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getActions().getNavManager().navigate(YouTubeFragment.getyInstance(),true);
-
-            }
+                getActions().getNavManager().navigate(YouTubeFragment.getyInstance(),true); }
         });
 
         //tutaj piszesz kod

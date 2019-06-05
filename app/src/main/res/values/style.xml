@@ -3,6 +3,7 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
+        <item name="android:textColor">@color/white</item>
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
@@ -10,8 +11,14 @@
 //parent="general" ? fullscreen
 
     <style name="fullscreen" >
+        <item name="android:editTextColor">@color/starWarsThemeColor</item>
+        <item name="android:textColor">@color/starWarsThemeColor</item>
         <item name="android:windowFullscreen">true</item>
         <item name="android:windowNoTitle">true</item>
+        <item name="android:textColorHint">@color/starWarsThemeColor</item>
+        <item name="android:spinnerDropDownItemStyle">@style/mySpinnerItemStyle</item>
+        <item name="android:buttonStyle">@style/myButton</item>
+        <item name="android:textViewStyle">@style/myTextView</item>
     </style>
 
     <style name="AppSplashScreen" parent="Theme.AppCompat.Light.NoActionBar">
@@ -21,6 +28,12 @@
         <item name="android:windowContentOverlay">@null</item>
         <item name="android:windowBackground">@drawable/splash</item>
     </style>
+    
+    <style name="myTextView" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/starWarsThemeColor</item>
+        <item name="android:background">@android:color/black</item>
+        <item name="android:fontFamily">@font/aldrich</item>
+    </style>
 
     <style name="button_dialog" parent="@style/Widget.AppCompat.Button.Borderless">
         <item name="android:layout_width">85dp</item>
@@ -28,5 +41,18 @@
         <item name="android:textColor">@color/colorAccent</item>
         <item name="android:textAllCaps">true</item>
     </style>
+
+    <style name="mySpinnerItemStyle" parent="@android:style/Widget.Holo.DropDownItem.Spinner">
+        <item name="android:textColor">@color/starWarsThemeColor</item>
+        <item name="android:background">@android:color/black</item>
+    </style>
+
+    <style name="myButton" parent="Base.Widget.AppCompat.Button.Colored">
+        <item name="android:background">@drawable/button_anim</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/aldrich</item>
+    </style>
+
 
 </resources>
