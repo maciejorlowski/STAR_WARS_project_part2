@@ -11,6 +11,7 @@ import project.pb.star_wars_project.R;
 import project.pb.star_wars_project.base.BaseFragment;
 
 import project.pb.star_wars_project.pages.gallery.GalleryFragment;
+import project.pb.star_wars_project.pages.gallery.YouTubeGalleryFragment;
 import project.pb.star_wars_project.pages.searching.SearchingFragment;
 import project.pb.star_wars_project.youtube.YouTubeFragment;
 
@@ -51,7 +52,7 @@ public class MenuFragment extends BaseFragment {
         youtubeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getActions().getNavManager().navigate(YouTubeFragment.getYouTubeInstance(), true);
+                getActions().getNavManager().navigate(YouTubeGalleryFragment.getYouTubeGalleryInstance(), true);
 
             }
         });

@@ -39,4 +39,6 @@
 
     <string name="cancel_btn">Cancel</string>
     <string name="toast_noConnection">Brak polaczenia z internetem</string>
+    <string name="youtube"> YouTube Videos </string>
+    <string name="meme">Mem Gallery</string>
 </resources>
