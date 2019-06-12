@@ -1,146 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical">
     <android.support.v7.widget.CardView
+
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            card_view:cardBackgroundColor="@color/semiTransparent">
 
         <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:padding="8dp">
+            <ImageView
+                    android:id="@+id/film_image_view"
+                    android:layout_width="@dimen/image_size"
+                    android:layout_height="@dimen/image_size"/>
             <TextView
-                    android:text="TextView"
-                    android:layout_width="130dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:layout_toRightOf="@id/tile_label"
-                    android:layout_marginLeft="8dp"
-                    android:id="@+id/f_title"/>
-            <TextView
-                    android:text="TextView"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/f_title"
-                    android:layout_marginTop="8dp"
-                    android:layout_toRightOf="@id/id_label"
-                    android:id="@+id/f_episode_id"/>
-            <TextView
-                    android:text="TextView"
-                    android:layout_width="285dp"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/f_episode_id"
-                    android:layout_marginTop="8dp"
-                    android:layout_toRightOf="@id/director_label"
-                    android:id="@+id/f_director"/>
-            <TextView
-                    android:text="TextView"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/f_director"
-                    android:id="@+id/f_producer"
-                    android:layout_toRightOf="@id/producer_label"
-                    android:layout_marginTop="8dp"/>
-            <TextView
-                    android:text="TextView"
-                    android:layout_width="75dp"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/f_producer"
-                    android:layout_marginTop="8dp"
-                    android:layout_toRightOf="@id/release_date_label"
-                    android:id="@+id/f_release_date"/>
-            <Button
-                    android:text="Vehicles"
+                    android:text=""
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_toRightOf="@id/f_episode_id"
-                    android:id="@+id/r_vehicles"
-                    android:layout_marginLeft="8dp"
-                    android:layout_toEndOf="@+id/f_episode_id"
-                    android:layout_marginTop="8dp"
-                    android:layout_alignParentTop="true"/>
-            <Button
-                    android:text="Starships"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_toRightOf="@id/f_producer"
-                    android:layout_below="@+id/r_vehicles"
-                    android:id="@+id/r_starships"
-                    android:layout_marginLeft="8dp"
-                    android:layout_toEndOf="@+id/f_release_date"
-                    android:layout_marginTop="8dp"/>
-            <Button
-                    android:text="Films"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_toRightOf="@id/r_vehicles"
-                    android:id="@+id/r_films"
-                    android:layout_toEndOf="@+id/r_vehicles"
-                    android:layout_marginTop="8dp"
-                    android:layout_alignParentTop="true"/>
-            <Button
-                    android:text="Species"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_toRightOf="@id/r_starships"
-                    android:layout_below="@+id/r_films"
-                    android:id="@+id/r_species"
-                    android:layout_toEndOf="@+id/r_starships"
-                    android:layout_marginTop="8dp"/>
+                    android:id="@+id/film_title"
+                    android:layout_toRightOf="@id/film_image_view"
+                    android:layout_marginLeft="@dimen/margin_top"
+                    android:layout_marginTop="@dimen/margin_top"/>
             <TextView
-                    android:text="Title "
+                    android:text="@string/director"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_marginStart="2dp"
-                    android:layout_alignParentTop="true"
-                    android:id="@+id/tile_label"
-                    android:layout_marginTop="8dp"/>
-
+                    android:id="@+id/film_director"
+                    android:layout_below="@id/film_title"
+                    android:layout_toRightOf="@id/film_image_view"
+                    android:layout_marginLeft="@dimen/margin_top"
+                    android:layout_marginTop="@dimen/margin_top"/>
             <TextView
-                    android:text="Episode id "
+                    android:text=""
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/id_label"
-                    android:layout_marginStart="2dp"
-                    android:layout_below="@id/tile_label"
-                    android:layout_marginTop="8dp"/>
-
-            <TextView
-                    android:text="Director "
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/director_label"
-                    android:layout_marginStart="2dp"
-                    android:layout_below="@id/id_label"
-                    android:layout_marginTop="8dp"/>
-            <TextView
-                    android:text="Producer "
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/producer_label"
-                    android:layout_marginStart="2dp"
-                    android:layout_below="@id/director_label"
-                    android:layout_marginTop="8dp"/>
-            <TextView
-                    android:text="Relase date "
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/release_date_label"
-                    android:layout_marginStart="2dp"
-                    android:layout_below="@id/producer_label"
-                    android:layout_marginTop="8dp"/>
-
+                    android:id="@+id/film_director_label"
+                    android:layout_below="@id/film_title"
+                    android:layout_toRightOf="@id/film_director"
+                    android:layout_marginLeft="@dimen/margin_top"
+                    android:layout_marginTop="@dimen/margin_top"/>
 
 
         </RelativeLayout>
 
     </android.support.v7.widget.CardView>
 
-
-</LinearLayout>
+</RelativeLayout>

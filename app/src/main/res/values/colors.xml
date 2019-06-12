@@ -4,9 +4,14 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
 
-
+    <color name="white">#FFFFFF</color>
     <color name="color_topbar">#FFFFFF</color>
     <color name="dialog_background">#FFFFFF</color>
     <color name="basic_text">#ff0099cc</color>
+    <color name="gallery_background">#997a00</color>
+    <color name="semiTransparent">#20ffffb0</color>
+    <color name="starWarsThemeColor">#4BD5EE</color>
+    <color name="starWarsLogoColor">#DFB13A</color>
+    <color name="starWarsHighlightLogoColor">#F3BF4A</color>
 
 </resources>

@@ -1,186 +1,168 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical" >
 
     <android.support.v7.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-        <RelativeLayout
+            android:layout_height="match_parent"
+            app:cardCornerRadius="0dp"
+            app:cardMaxElevation="1dp"
+            app:cardElevation="0.7dp"
+            app:contentPadding="10dp"
+            app:contentPaddingBottom="0dp"
+            app:cardPreventCornerOverlap="true"
+            app:cardUseCompatPadding="true">
+        <GridLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:padding="8dp">
-            <TextView
-                    android:text="TextView"
-                    android:layout_width="220dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:layout_toRightOf="@id/name_label"
-                    android:layout_marginLeft="8dp"
-                    android:id="@+id/sp_name"/>
-            <TextView
-                    android:text="TextView"
-                    android:layout_width="200dp"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/sp_name"
-                    android:layout_marginTop="8dp"
-                    android:layout_toRightOf="@id/height_label"
-                    android:id="@+id/sp_height"/>
-            <TextView
-                    android:text="TextView"
-                    android:layout_width="220dp"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/sp_height"
-                    android:layout_marginTop="8dp"
-                    android:layout_toRightOf="@id/classification_label"
-                    android:id="@+id/sp_classification"/>
-            <TextView
-                    android:text="TextView"
-                    android:layout_width="220dp"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/sp_classification"
-                    android:layout_marginTop="8dp"
-                    android:layout_toRightOf="@id/designation_label"
-                    android:id="@+id/sp_designation"/>
-            <TextView
-                    android:text="TextView"
-                    android:layout_width="220dp"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/sp_designation"
-                    android:id="@+id/sp_hair_color"
-                    android:layout_toRightOf="@id/hair_color_label"
-                    android:layout_marginTop="8dp"/>
-            <TextView
-                    android:text="TextView"
-                    android:layout_width="220dp"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/sp_hair_color"
-                    android:layout_marginTop="8dp"
-                    android:layout_toRightOf="@id/skin_color_label"
-                    android:id="@+id/sp_skin_color"/>
-            <TextView
-                    android:text="TextView"
-                    android:layout_width="220dp"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/sp_skin_color"
-                    android:layout_marginTop="8dp"
-                    android:layout_toRightOf="@id/eye_color_label"
-                    android:id="@+id/sp_eye_color"/>
-            <TextView
-                    android:text="TextView"
-                    android:layout_width="220dp"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/sp_eye_color"
-                    android:layout_marginTop="8dp"
-                    android:layout_toRightOf="@id/language_label"
-                    android:id="@+id/sp_language"/>
-            <TextView
-                    android:text="TextView"
-                    android:layout_width="220dp"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/sp_language"
-                    android:layout_marginTop="8dp"
-                    android:layout_toRightOf="@id/av_lifespan_label"
-                    android:id="@+id/sp_av_lifespan"/>
-            <TextView
-                    android:text="TextView"
-                    android:layout_width="220dp"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/sp_av_lifespan"
-                    android:layout_marginTop="8dp"
-                    android:layout_toRightOf="@id/homeworld_label"
-                    android:id="@+id/sp_homeworld"/>
+                android:background="@android:color/black"
+                android:columnCount="2"
+        >
 
-            <TextView
-                    android:text="Name "
+            <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_marginStart="2dp"
-                    android:layout_alignParentTop="true"
-                    android:id="@+id/name_label"
-                    android:layout_marginTop="8dp"/>
+                    android:orientation="vertical"
+                    android:layout_columnWeight="1"
+                    android:layout_column="1">
+                <TextView
+                        android:text="TextView"
+                        android:layout_margin="3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/sp_name"/>
+                <TextView
+                        android:text="TextView"
+                        android:layout_margin="3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/sp_height"/>
+                <TextView
+                        android:text="TextView"
+                        android:layout_margin="3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/sp_classification"/>
+                <TextView
+                        android:text="TextView"
+                        android:layout_margin="3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/sp_designation"/>
+                <TextView
+                        android:text="TextView"
+                        android:layout_margin="3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/sp_hair_color"/>
+                <TextView
+                        android:text="TextView"
+                        android:layout_margin="3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/sp_skin_color"/>
+                <TextView
+                        android:text="TextView"
+                        android:layout_margin="3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/sp_eye_color"/>
+                <TextView
+                        android:text="TextView"
+                        android:layout_margin="3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/sp_language"/>
+                <TextView
+                        android:text="TextView"
+                        android:layout_margin="3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/sp_av_lifespan"/>
+                <TextView
+                        android:text="TextView"
+                        android:layout_margin="3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/sp_homeworld"/>
+            </LinearLayout>
 
-            <TextView
-                    android:text="Average height "
+            <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/height_label"
-                    android:layout_marginStart="2dp"
-                    android:layout_below="@id/name_label"
-                    android:layout_marginTop="8dp"/>
+                    android:orientation="vertical"
+                    android:layout_columnWeight="1"
+                    android:layout_column="0">
+                <TextView
+                        android:text="Name "
+                        android:layout_margin="3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/name_label"/>
 
-            <TextView
-                    android:text="Classification "
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/classification_label"
-                    android:layout_marginStart="2dp"
-                    android:layout_below="@id/height_label"
-                    android:layout_marginTop="8dp"/>
-            <TextView
-                    android:text="Designation "
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/designation_label"
-                    android:layout_marginStart="2dp"
-                    android:layout_below="@id/classification_label"
-                    android:layout_marginTop="8dp"/>
-            <TextView
-                    android:text="Hair color "
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/hair_color_label"
-                    android:layout_marginStart="2dp"
-                    android:layout_below="@id/designation_label"
-                    android:layout_marginTop="8dp"/>
-            <TextView
-                    android:text="Skin color "
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/skin_color_label"
-                    android:layout_marginStart="2dp"
-                    android:layout_below="@id/hair_color_label"
-                    android:layout_marginTop="8dp"/>
-            <TextView
-                    android:text="Eye color "
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/eye_color_label"
-                    android:layout_marginStart="2dp"
-                    android:layout_below="@id/skin_color_label"
-                    android:layout_marginTop="8dp"/>
-            <TextView
-                    android:text="Language "
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/language_label"
-                    android:layout_marginStart="2dp"
-                    android:layout_below="@id/eye_color_label"
-                    android:layout_marginTop="8dp"/>
-            <TextView
-                    android:text="Average lifespan "
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/av_lifespan_label"
-                    android:layout_marginStart="2dp"
-                    android:layout_below="@id/language_label"
-                    android:layout_marginTop="8dp"/>
-            <TextView
-                    android:text="Homeworld "
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/homeworld_label"
-                    android:layout_marginStart="2dp"
-                    android:layout_below="@id/av_lifespan_label"
-                    android:layout_marginTop="8dp"/>
+                <TextView
+                        android:text="Average height "
+                        android:layout_margin="3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/height_label"/>
 
+                <TextView
+                        android:text="Classification "
+                        android:layout_margin="3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/classification_label"/>
+                <TextView
+                        android:text="Designation "
+                        android:layout_margin="3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/designation_label"/>
+                <TextView
+                        android:text="Hair color "
+                        android:layout_margin="3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/hair_color_label"/>
+                <TextView
+                        android:text="Skin color "
+                        android:layout_margin="3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/skin_color_label"/>
+                <TextView
+                        android:text="Eye color "
+                        android:layout_margin="3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/eye_color_label"/>
+                <TextView
+                        android:text="Language "
+                        android:layout_margin="3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/language_label"/>
+                <TextView
+                        android:text="Average lifespan "
+                        android:layout_margin="3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/av_lifespan_label"/>
+                <TextView
+                        android:text="Homeworld "
+                        android:layout_margin="3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/homeworld_label"/>
+            </LinearLayout>
 
-        </RelativeLayout>
+        </GridLayout>
+
 
     </android.support.v7.widget.CardView>
 

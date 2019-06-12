@@ -238,7 +238,7 @@ public class DetailFragment extends BaseFragment {
         consumables = starshipLayout.findViewById(R.id.st_comsumables);
         manufacturer = starshipLayout.findViewById(R.id.st_manufacturer);
         v_class = starshipLayout.findViewById(R.id.st_class);
-        hyper = starshipLayout.findViewById(R.id.st_hyper);
+        hyper = starshipLayout.findViewById(R.id.st_hyperdrive);
         mglt = starshipLayout.findViewById(R.id.st_mglt);
 
         name.setText(starship.getName());
