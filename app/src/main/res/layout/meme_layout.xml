@@ -4,11 +4,9 @@
         android:layout_width="match_parent"
         android:layout_height="180dp"
         android:background="@drawable/background">
-    
-    <WebView
-            android:id="@+id/webView"
-            android:layout_width="match_parent"
-            android:layout_height="180dp">
-    </WebView>
 
+        <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                   android:layout_height="180dp"/>
 </LinearLayout>
