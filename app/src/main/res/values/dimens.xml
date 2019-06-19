@@ -7,7 +7,8 @@
     <dimen name="dialog_message">16sp</dimen>
     <dimen name="dialog_width">350dp</dimen>
     <dimen name="dialog_height">180dp</dimen>
-
+    <dimen name="edit_text_width">198dp</dimen>
+    <dimen name="edit_text_height">39dp</dimen>
     <dimen name="exitdialog_width">240dp</dimen>
     <dimen name="exitdialog_height">200dp</dimen>
     <dimen name="image_size">80dp</dimen>
