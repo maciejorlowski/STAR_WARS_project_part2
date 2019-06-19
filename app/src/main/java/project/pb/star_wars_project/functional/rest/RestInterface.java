@@ -5,6 +5,7 @@ import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
 import retrofit2.http.Query;
+import retrofit2.http.Url;
 
 import java.util.List;
 
@@ -48,5 +49,22 @@ public interface RestInterface {
     Call<Planets> getSearchPlanet(@Query("search") String search);
 
 
+    @GET
+    Call<Planets> getSinglePlanet(@Url String url);
+
+    @GET
+    Call<People> getSinglePerson(@Url String url);
+
+    @GET
+    Call<Films> getSingleFilm(@Url String url);
+
+    @GET
+    Call<Species> getSingleSpecie(@Url String url);
+
+    @GET
+    Call<Vehicles> getSingleVehicle(@Url String url);
+
+    @GET
+    Call<Starships> getSingleStarship(@Url String url);
 
 }

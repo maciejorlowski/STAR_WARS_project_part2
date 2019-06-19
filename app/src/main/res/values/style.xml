@@ -29,4 +29,10 @@
         <item name="android:textAllCaps">true</item>
     </style>
 
+    <style name="edit_dialog">
+        <item name="android:textSize">15dp</item>
+        <item name="android:textColor">@color/milk_white</item>
+        <item name="android:colorBackground">@color/bloody_mery</item>
+    </style>
+
 </resources>

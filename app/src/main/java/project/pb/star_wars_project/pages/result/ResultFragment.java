@@ -1,6 +1,5 @@
 package project.pb.star_wars_project.pages.result;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -10,7 +9,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 import project.pb.star_wars_project.R;
 import project.pb.star_wars_project.base.BaseFragment;
 import project.pb.star_wars_project.models.interfaces.models.*;

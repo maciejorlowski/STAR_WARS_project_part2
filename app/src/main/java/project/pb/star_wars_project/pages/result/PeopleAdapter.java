@@ -7,10 +7,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 import project.pb.star_wars_project.R;
 import project.pb.star_wars_project.functional.navigation.NavManager;
 import project.pb.star_wars_project.models.interfaces.models.Films;
@@ -47,17 +45,9 @@ public class PeopleAdapter extends RecyclerView.Adapter<PeopleAdapter.PeopleView
         peopleViewHolder.name.setText(people.getName());
         peopleViewHolder.birth_year.setText(people.getBirth_year());
         peopleViewHolder.imageView.setImageResource(R.drawable.logo);
-       /* peopleViewHolder.height.setText(people.getHeight());
-        peopleViewHolder.mass.setText(people.getMass());
-        peopleViewHolder.hair_color.setText(people.getHair_color());
-        peopleViewHolder.skin_color.setText(people.getSkin_color());
-        peopleViewHolder.eye_color.setText(people.getEye_color());
-        peopleViewHolder.gender.setText(people.getGender());
-        peopleViewHolder.homeworld.setText(people.getHomeworld());*/
         peopleViewHolder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(mContext, "Recycle Click", Toast.LENGTH_SHORT).show();
                 DetailFragment detailFragment = new DetailFragment();
                 detailFragment.setPeople(people);
                 detailFragment.setSelect(1);
@@ -85,17 +75,6 @@ public class PeopleAdapter extends RecyclerView.Adapter<PeopleAdapter.PeopleView
             name=itemView.findViewById(R.id.people_name);
             birth_year=itemView.findViewById(R.id.people_birth_year_label);
             imageView=itemView.findViewById(R.id.people_image_view);
-           /* height=itemView.findViewById(R.id.r_height);
-            mass=itemView.findViewById(R.id.r_mass);
-            hair_color=itemView.findViewById(R.id.r_hair_color);
-            skin_color=itemView.findViewById(R.id.r_skin_color);
-            eye_color=itemView.findViewById(R.id.r_eye_color);
-            gender=itemView.findViewById(R.id.r_gender);
-            homeworld=itemView.findViewById(R.id.r_homeworld);
-            films=itemView.findViewById(R.id.r_films);
-            vehicles=itemView.findViewById(R.id.r_vehicles);
-            starships=itemView.findViewById(R.id.r_starships);
-            species=itemView.findViewById(R.id.r_species);*/
         }
     }
 }

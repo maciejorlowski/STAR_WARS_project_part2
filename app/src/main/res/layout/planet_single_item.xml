@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
 
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="wrap_content" xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:orientation="vertical">
     <android.support.v7.widget.CardView
 
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            card_view:cardBackgroundColor="@color/semiTransparent">
 
         <RelativeLayout
                 android:layout_width="match_parent"
@@ -45,19 +46,10 @@
                     android:layout_toRightOf="@id/planet_population"
                     android:layout_marginLeft="@dimen/margin_top"
                     android:layout_marginTop="@dimen/margin_top"/>
-            <Button
-                    android:text="@string/more_button"
-                    android:layout_width="75dp"
-                    android:layout_height="40dp"
-                    android:layout_below="@id/planet_population"
-                    android:id="@+id/planet_more_button"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginTop="@dimen/margin_top"
-                    android:layout_marginEnd="@dimen/margin_top"/>
 
 
         </RelativeLayout>
 
     </android.support.v7.widget.CardView>
 
-</LinearLayout>
+</RelativeLayout>
